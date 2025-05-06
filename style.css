@@ -41,7 +41,6 @@ nav a {
   flex: 0 0 55%;
 }
 
-/* Logo and intro layout */
 .logo {
   width: 160px;
   height: auto;
@@ -49,25 +48,19 @@ nav a {
   margin-bottom: 10px;
 }
 
-.intro-photo-wrapper {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
+/* Introduction and photo placement */
 .intro-text {
-  flex: 1;
+  margin-top: 20px;
 }
 
 .photo-inline {
   width: 150px;
   border-radius: 8px;
   object-fit: cover;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
-/* References and links */
+/* References */
 .references a,
 a {
   color: #800000;
@@ -78,7 +71,7 @@ a {
   margin-bottom: 15px;
 }
 
-/* Job Market Paper Section */
+/* Job Market Paper */
 .jmp-section {
   max-width: 900px;
   margin: 60px auto;
