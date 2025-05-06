@@ -3,76 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Tosin Gbadegesin - Ph.D. Candidate in Economics</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #111;
-    }
-
-    nav {
-      background: #f5f5f5;
-      padding: 15px 0;
-      text-align: center;
-      font-weight: bold;
-      border-bottom: 1px solid #ccc;
-    }
-
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .left {
-      width: 60%;
-    }
-
-    .right {
-      width: 35%;
-      text-align: center;
-    }
-
-    img.photo {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    img.logo {
-      width: 200px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-
-    h2 {
-      margin-top: 30px;
-      font-size: 20px;
-      border-bottom: 2px solid #eee;
-    }
-
-    .references a {
-      color: #800000;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
@@ -80,53 +13,51 @@
     <a href="work.html">Work Experience</a>
   </nav>
 
-  <div class="container">
-    <div class="left">
-      <h1>Tosin Gbadegesin</h1>
-      <p>Ph.D. Candidate in Economics</p>
+  <div class="main-container">
+    <div class="left-column">
+      <section class="fields">
+        <h2>Research and Teaching Fields</h2>
+        <p><strong>Primary:</strong> Urban Economics, Energy Economics, Environmental Economics</p>
+        <p><strong>Secondary:</strong> Labor Economics, Health Economics</p>
+      </section>
 
-      <h2>Research Fields</h2>
-      <p><strong>Primary:</strong> Urban Economics, Energy Economics</p>
-      <p><strong>Secondary:</strong> Climate Policy, Environmental Economics, Development Economics</p>
+      <section class="references">
+        <h2>References</h2>
+        <p><strong>Haydar Kurban</strong><br><a href="mailto:hkurban@howard.edu">hkurban@howard.edu</a></p>
+        <p><strong>Omari Swinton</strong><br><a href="mailto:oswinton@howard.edu">oswinton@howard.edu</a></p>
+        <p><strong>Elizabeth Asiedu</strong><br><a href="mailto:elizabeth.asiedu@howard.edu">elizabeth.asiedu@howard.edu</a></p>
+        <p><strong>Amirhossein Amini Behbahani</strong><br><a href="mailto:amirhossein.aminibe@howard.edu">amirhossein.aminibe@howard.edu</a></p>
+        <p><strong>Durronjae Boothe</strong><br><a href="mailto:durronjae.boothe@howard.edu">durronjae.boothe@howard.edu</a></p>
+      </section>
+    </div>
 
-      <h2>References</h2>
-      <div class="references">
-        <p><strong>Kurban, Haydar</strong><br>
-        <a href="mailto:hkurban@howard.edu">hkurban@howard.edu</a></p>
-
-        <p><strong>Swinton, Omari</strong><br>
-        <a href="mailto:oswinton@howard.edu">oswinton@howard.edu</a></p>
-
-        <p><strong>Asiedu, Elizabeth</strong><br>
-        <a href="mailto:elizabeth.asiedu@howard.edu">elizabeth.asiedu@howard.edu</a></p>
-
-        <p><strong>Amini Behbahani, Amirhossein</strong><br>
-        <a href="mailto:amirhossein.aminibe@howard.edu">amirhossein.aminibe@howard.edu</a></p>
-
-        <p><strong>Boothe, Durronjae</strong><br>
-        <a href="mailto:durronjae.boothe@howard.edu">durronjae.boothe@howard.edu</a></p>
-      </div>
-
-      <h2>Contact</h2>
-      <p>
+    <div class="right-column">
+      <img src="howard-econ-logo.png" alt="Howard Econ Logo" class="logo">
+      <img src="tosin.jpg" alt="Tosin Gbadegesin" class="photo">
+      <p><strong>Personal Website:</strong> tosinsdgs.github.io</p>
+      <p><strong>Email Address:</strong> 
         <a href="mailto:tosingbadegesin@bison.howard.edu">tosingbadegesin@bison.howard.edu</a>, 
         <a href="mailto:tosingbade05@gmail.com">tosingbade05@gmail.com</a>
       </p>
-      <p>CV: <a href="cv.pdf" target="_blank">Download my CV</a></p>
-
-      <h2>Welcome</h2>
       <p>
-        Welcome to my website! I am a Ph.D. candidate in Economics at Howard University, specializing in Energy, Urban, and 
-        Environmental Economics. I apply tools from applied econometrics to explore how policy and technology shape 
-        sustainable and equitable outcomes.
+        I am a Ph.D. candidate in Economics at Howard University. 
+        My research focuses on energy systems, urban resilience, and climate-related development challenges, 
+        with secondary interests in labor and health economics.
       </p>
-    </div>
-
-    <div class="right">
-      <img src="howard-econ-logo.png" alt="Howard Econ Logo" class="logo">
-      <img src="tosin.jpg" alt="Tosin Gbadegesin" class="photo">
+      <p>You can download my <a href="cv.pdf" target="_blank">CV here</a>.</p>
     </div>
   </div>
 
+  <div class="jmp-section">
+    <h2>Job Market Paper</h2>
+    <h3><a href="#">Heterogeneous Effects of Cooling Demand on Electricity Consumption: Evidence from U.S. Households</a></h3>
+    <p>
+      This study examines the impact of cooling energy demand on residential electricity use in the United States. Utilizing data from the 2020 Residential Energy Consumption Survey, the study employs Conditional Distributional Treatment Effects (CDTE) and Conditional Average Treatment Effects (CATE) frameworks followed by an OLS projection to assess the heterogeneity of cooling-related electricity demand across subpopulations. A binary treatment variable is constructed based on climate zone-specific cooling degree day benchmarks. The findings indicate substantial variation in electricity use across climate zones, with the highest increases observed in hot and mixed dry regions, where cooling demand is most pronounced. The T-Learner and DR Learner models suggest significant consumption increases in these areas, while the S-Learner produces lower but consistent effects. CQTE estimates at the 25th quantile show stronger treatment effects in lower-consuming households in hotter climates, whereas, at the 75th quantile, higher baseline energy users in milder climates exhibit substantial cooling-related electricity demand. Beyond climate factors, household characteristics play a crucial role – homes with central air conditioning systems consume more electricity than those with unitary AC, while participation in energy assistance programs reduces electricity use. The study also highlights income-based disparities in energy consumption, with higher-income households experiencing greater increases in electricity use, while solar adoption exhibits mixed effects, indicating continued grid reliance. These results emphasize the need for targeted energy efficiency policies, particularly in high-demand regions, to mitigate energy burdens and promote equitable access to cooling technologies.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tosin Gbadegesin</p>
+  </footer>
 </body>
 </html>
