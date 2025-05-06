@@ -5,7 +5,7 @@ body {
   color: #111;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 /* Link styles */
@@ -87,7 +87,7 @@ nav a {
 .fields h2, .references h2, .jmp-section h2 {
   font-size: 20px;
   border-bottom: 2px solid #eee;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .jmp-section {
