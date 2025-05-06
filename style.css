@@ -41,7 +41,7 @@ nav a {
   flex: 0 0 55%;
 }
 
-/* Logo and department text */
+/* Logo and department */
 .logo {
   width: 160px;
   height: auto;
@@ -60,7 +60,7 @@ nav a {
 }
 
 .photo-inline {
-  width: 300px;
+  width: 180px;
   border-radius: 8px;
   object-fit: cover;
   margin-top: 20px;
@@ -93,6 +93,7 @@ a {
 .jmp-section h3 {
   font-size: 18px;
   color: #800000;
+  margin-bottom: 10px;
 }
 
 /* Footer */
