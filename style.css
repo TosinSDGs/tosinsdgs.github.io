@@ -41,7 +41,7 @@ nav a {
   flex: 0 0 55%;
 }
 
-/* Logo and department label */
+/* Logo and department text */
 .logo {
   width: 160px;
   height: auto;
@@ -54,13 +54,13 @@ nav a {
   line-height: 1.4;
 }
 
-/* Intro and photo */
+/* Intro text and photo */
 .intro-text {
   margin-top: 20px;
 }
 
 .photo-inline {
-  width: 220px;
+  width: 180px;
   border-radius: 8px;
   object-fit: cover;
   margin-top: 20px;
