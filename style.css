@@ -11,39 +11,16 @@ body {
 /* Navigation bar */
 nav {
   background: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  height: 90px;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-}
-
-.nav-center {
-  display: flex;
-  gap: 30px;
+  padding: 15px 0;
+  text-align: center;
   font-weight: bold;
-  align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
-.nav-center a {
+nav a {
+  margin: 0 20px;
   text-decoration: none;
   color: #333;
-  font-size: 16px;
-}
-
-.nav-logo {
-  position: absolute;
-  right: 30px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo img {
-  height: 60px;
-  width: auto;
 }
 
 /* Main layout */
@@ -58,36 +35,50 @@ nav {
 
 .left-column {
   flex: 0 0 40%;
-  padding-right: 40px;
 }
 
 .right-column {
-  flex: 0 0 60%;
+  flex: 0 0 55%;
 }
 
-/* References and Fields */
-.references a {
+/* Logo and intro layout */
+.logo {
+  width: 160px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.intro-photo-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.photo-inline {
+  width: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 5px;
+}
+
+/* References and links */
+.references a,
+a {
   color: #800000;
   text-decoration: none;
 }
 
-.references p,
-.fields p {
+.references p {
   margin-bottom: 15px;
 }
 
-/* Introduction and Photo */
-.intro-text {
-  font-size: 16px;
-}
-
-.photo-below {
-  margin-top: 20px;
-  width: 160px;
-  border-radius: 8px;
-}
-
-/* Job Market Paper section */
+/* Job Market Paper Section */
 .jmp-section {
   max-width: 900px;
   margin: 60px auto;
@@ -102,11 +93,6 @@ nav {
 
 .jmp-section h3 {
   font-size: 18px;
-  color: #800000;
-}
-
-.jmp-section a {
-  text-decoration: none;
   color: #800000;
 }
 
