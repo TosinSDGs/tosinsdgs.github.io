@@ -1,5 +1,6 @@
+/* Base styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@ body {
   color: #111;
 }
 
+/* Navigation bar */
 nav {
   background: #f5f5f5;
   padding: 15px 0;
@@ -21,63 +23,98 @@ nav a {
   color: #333;
 }
 
+/* Layout container */
 .main-container {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 40px;
 }
 
 .left-column {
-  width: 40%;
-  padding-right: 20px;
+  flex: 0 0 40%;
 }
 
 .right-column {
-  width: 60%;
+  flex: 0 0 55%;
 }
 
+/* Logo and department label */
 .logo {
-  width: 180px;
+  width: 160px;
+  height: auto;
   display: block;
   margin-bottom: 10px;
 }
 
 .dept-label {
   margin-bottom: 20px;
-  font-size: 16px;
+  line-height: 1.4;
 }
 
+/* Intro text and photo */
 .intro-text {
-  font-size: 16px;
-}
-
-.photo-inline {
-  width: 230px;
-  border-radius: 8px;
   margin-top: 20px;
 }
 
+.photo-inline {
+  width: 190px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* Email and links */
+a {
+  color: #800000;
+  text-decoration: none;
+}
+
+.references a {
+  color: #800000;
+}
+
+.references p {
+  margin-bottom: 15px;
+}
+
+/* Job Market Paper & other sections */
 .jmp-section {
-  max-width: 1000px;
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 60px auto;
   padding: 0 20px;
 }
 
 .jmp-section h2 {
-  margin-top: 30px;
-  font-size: 22px;
+  font-size: 24px;
+  border-bottom: 2px solid #eee;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.jmp-section h3 {
+  font-size: 18px;
+  color: #800000;
+  margin-bottom: 15px;
 }
 
 .jmp-section ul {
-  margin-top: 10px;
+  list-style-type: disc;
   padding-left: 20px;
+  margin-bottom: 30px;
 }
 
+.jmp-section li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  border-top: 1px solid #ccc;
-  margin-top: 40px;
   font-size: 14px;
+  background-color: #f5f5f5;
+  margin-top: 60px;
 }
