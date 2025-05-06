@@ -61,9 +61,9 @@ nav a {
 
 .photo-inline {
   width: 300px;
-  border-radius: 5px;
+  border-radius: 8px;
   object-fit: cover;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* References and links */
