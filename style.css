@@ -60,10 +60,10 @@ nav a {
 }
 
 .photo-inline {
-  width: 150px;
+  width: 250px;
   border-radius: 8px;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 /* References and links */
