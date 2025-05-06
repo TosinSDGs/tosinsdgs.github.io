@@ -23,7 +23,7 @@ nav a {
   color: #333;
 }
 
-/* Main layout */
+/* Layout container */
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -41,9 +41,9 @@ nav a {
   flex: 0 0 55%;
 }
 
-/* Logo and department */
+/* Logo and department label */
 .logo {
-  width: 160px;
+  width: 250px;
   height: auto;
   display: block;
   margin-bottom: 10px;
@@ -60,24 +60,27 @@ nav a {
 }
 
 .photo-inline {
-  width: 300px;
+  width: 190px;
   border-radius: 8px;
   object-fit: cover;
   margin-top: 20px;
 }
 
-/* References and links */
-.references a,
+/* Email and links */
 a {
   color: #800000;
   text-decoration: none;
+}
+
+.references a {
+  color: #800000;
 }
 
 .references p {
   margin-bottom: 15px;
 }
 
-/* Job Market Paper section */
+/* Job Market Paper & other sections */
 .jmp-section {
   max-width: 900px;
   margin: 60px auto;
@@ -87,12 +90,23 @@ a {
 .jmp-section h2 {
   font-size: 24px;
   border-bottom: 2px solid #eee;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 
 .jmp-section h3 {
   font-size: 18px;
   color: #800000;
+  margin-bottom: 15px;
+}
+
+.jmp-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.jmp-section li {
   margin-bottom: 10px;
 }
 
