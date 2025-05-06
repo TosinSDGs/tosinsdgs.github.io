@@ -74,9 +74,9 @@ nav a {
 
 .photo-inline {
   max-width: 100%;
-  width: 280px;
+  width: 220px;
   height: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 5px;
 }
 
