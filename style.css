@@ -1,16 +1,14 @@
-/* Base styles */
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   color: #111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Navigation bar */
 nav {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   padding: 15px 0;
   text-align: center;
   font-weight: bold;
@@ -23,98 +21,99 @@ nav a {
   color: #333;
 }
 
-/* Layout container */
 .main-container {
   display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
   flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  gap: 40px;
+  justify-content: space-between;
 }
 
 .left-column {
-  flex: 0 0 40%;
+  width: 40%;
+  min-width: 300px;
 }
 
 .right-column {
-  flex: 0 0 55%;
+  width: 55%;
+  min-width: 300px;
+  text-align: left;
 }
 
-/* Logo and department label */
 .logo {
-  width: 160px;
-  height: auto;
-  display: block;
+  width: 200px;
   margin-bottom: 10px;
 }
 
 .dept-label {
   margin-bottom: 20px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.3;
 }
 
-/* Intro text and photo */
 .intro-text {
-  margin-top: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.intro-text p {
+  margin-bottom: 15px;
 }
 
 .photo-inline {
-  width: 190px;
-  border-radius: 8px;
-  object-fit: cover;
+  max-width: 100%;
+  width: 220px;
+  height: auto;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
-/* Email and links */
-a {
-  color: #800000;
-  text-decoration: none;
+.fields, .references {
+  margin-bottom: 30px;
+}
+
+.fields h2, .references h2, .jmp-section h2 {
+  font-size: 20px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 10px;
 }
 
 .references a {
   color: #800000;
 }
 
-.references p {
-  margin-bottom: 15px;
-}
-
-/* Job Market Paper & other sections */
 .jmp-section {
-  max-width: 900px;
-  margin: 60px auto;
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
 .jmp-section h2 {
-  font-size: 24px;
-  border-bottom: 2px solid #eee;
   margin-top: 40px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  border-bottom: 2px solid #eee;
 }
 
 .jmp-section h3 {
   font-size: 18px;
-  color: #800000;
-  margin-bottom: 15px;
-}
-
-.jmp-section ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
-
-.jmp-section li {
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
-/* Footer */
+.jmp-section p, .jmp-section ul {
+  font-size: 16px;
+}
+
+.jmp-section ul {
+  padding-left: 20px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
-  background-color: #f5f5f5;
-  margin-top: 60px;
+  background-color: #f9f9f9;
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
 }
