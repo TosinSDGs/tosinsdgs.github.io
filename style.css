@@ -23,7 +23,7 @@ nav a {
   color: #333;
 }
 
-/* Main layout */
+/* Layout */
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -39,17 +39,30 @@ nav a {
 
 .right-column {
   flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.logo {
+/* Logo and label block */
+.logo-block {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.logo-block .logo {
   width: 160px;
   height: auto;
-  display: block;
   margin-bottom: 10px;
 }
 
-/* Introduction and photo placement */
-.intro-text {
+.logo-block p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Bio and contact section */
+.bio-contact {
   margin-top: 20px;
 }
 
@@ -60,7 +73,7 @@ nav a {
   margin-top: 20px;
 }
 
-/* References */
+/* References and links */
 .references a,
 a {
   color: #800000;
