@@ -1,4 +1,4 @@
-/* --- Global --- */
+/* Base styles */
 body {
   font-family: sans-serif;
   line-height: 1.6;
@@ -8,41 +8,52 @@ body {
   color: #111;
 }
 
-/* --- Navigation Bar --- */
+/* Navigation bar */
 nav {
   background: #f5f5f5;
-  padding: 10px 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  padding: 0 20px;
+  height: 90px;
   border-bottom: 1px solid #ccc;
+  position: relative;
 }
 
-.nav-menu a {
-  margin: 0 20px;
+.nav-center {
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.nav-center a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .nav-logo {
   position: absolute;
-  right: 20px;
+  right: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
 }
 
-/* --- Main Two-Column Layout --- */
+/* Main layout */
 .main-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
+  gap: 40px;
 }
 
 .left-column {
@@ -54,26 +65,29 @@ nav {
   flex: 0 0 60%;
 }
 
-/* --- Fields & References --- */
-.fields h2,
-.references h2 {
-  margin-top: 0;
-}
-
+/* References and Fields */
 .references a {
   color: #800000;
   text-decoration: none;
 }
 
-/* --- Photo under Intro --- */
-.photo-large {
-  width: 200px;
-  border-radius: 8px;
-  margin-top: 20px;
-  display: block;
+.references p,
+.fields p {
+  margin-bottom: 15px;
 }
 
-/* --- Job Market Paper Section --- */
+/* Introduction and Photo */
+.intro-text {
+  font-size: 16px;
+}
+
+.photo-below {
+  margin-top: 20px;
+  width: 160px;
+  border-radius: 8px;
+}
+
+/* Job Market Paper section */
 .jmp-section {
   max-width: 900px;
   margin: 60px auto;
@@ -89,10 +103,14 @@ nav {
 .jmp-section h3 {
   font-size: 18px;
   color: #800000;
-  margin-top: 20px;
 }
 
-/* --- Footer --- */
+.jmp-section a {
+  text-decoration: none;
+  color: #800000;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
