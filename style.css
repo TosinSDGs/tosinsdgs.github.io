@@ -9,9 +9,19 @@ body {
 }
 
 .name-title {
-  font-size: 15px;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.name-title .name-bold {
   font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.name-title .title-regular {
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 8px;
 }
 
 /* Link styles */
