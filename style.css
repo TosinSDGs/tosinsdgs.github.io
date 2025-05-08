@@ -10,7 +10,7 @@ body {
 
 .name-title {
   font-size: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .name-title .name-bold {
@@ -21,7 +21,7 @@ body {
 .name-title .title-regular {
   font-weight: normal;
   font-size: 18px;
-  margin-left: 8px;
+  margin-left: 5px;
 }
 
 /* Link styles */
