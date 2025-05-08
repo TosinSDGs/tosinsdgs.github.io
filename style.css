@@ -15,12 +15,12 @@ body {
 
 .name-title .name-bold {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .name-title .title-regular {
   font-weight: normal;
-  font-size: 18px;
+  font-size: 14px;
   margin-left: 5px;
 }
 
