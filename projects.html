@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects - Tosin Gbadegesin</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-list {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .project-list h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .project-list li {
+      margin-bottom: 15px;
+    }
+
+    .project-list a {
+      font-weight: bold;
+    }
+
+    .project-desc {
+      font-size: 15px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="cv.html">Bio/CV</a>
+    <a href="work.html">Work Experience</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <div class="project-list">
+    <h2>GitHub Projects</h2>
+    <ul id="repo-list">
+      <li>Loading repositories...</li>
+    </ul>
+  </div>
+
+  <script>
+    const username = "your-github-username"; // ← change this to your actual GitHub username
+    const repoList = document.getElementById("repo-list");
+
+    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+      .then(response => response.json())
+      .then(repos => {
+        repoList.innerHTML = ""; // clear "loading..."
+        repos.slice(0, 6).forEach(repo => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            <div class="project-desc">${repo.description || "No description provided."}</div>
+          `;
+          repoList.appendChild(li);
+        });
+      })
+      .catch(error => {
+        repoList.innerHTML = "<li>Failed to load repositories.</li>";
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
