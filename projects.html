@@ -13,7 +13,7 @@
 
     .project-list h2 {
       font-size: 24px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .project-list ul {
@@ -22,16 +22,20 @@
     }
 
     .project-list li {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .project-list a {
+      color: #800000;
       font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
     }
 
     .project-desc {
       font-size: 15px;
       color: #444;
+      margin-top: 5px;
     }
   </style>
 </head>
@@ -46,32 +50,28 @@
 
   <div class="project-list">
     <h2>GitHub Projects</h2>
-    <ul id="repo-list">
-      <li>Loading repositories...</li>
+    <ul>
+      <li>
+        <a href="https://github.com/tosinsdgs/CwA-Impact-Study" target="_blank">CwA-Impact-Study</a>
+        <div class="project-desc">Evaluation of the economic impact of the G20 Compact with Africa initiative using causal inference tools.</div>
+      </li>
+      <li>
+        <a href="https://github.com/tosinsdgs/AFG-Climate-Analysis" target="_blank">AFG-Climate-Analysis</a>
+        <div class="project-desc">Climate shock analysis in Afghanistan using NDVI, rainfall, and food security indicators.</div>
+      </li>
+      <li>
+        <a href="https://github.com/tosinsdgs/NPL-using-Ensemble-Model" target="_blank">NPL-using-Ensemble-Model</a>
+        <div class="project-desc">Modeling non-performing loans using ensemble machine learning approaches with real banking data.</div>
+      </li>
+      <li>
+        <a href="https://github.com/tosinsdgs/Bank-Ensemble-Project" target="_blank">Bank-Ensemble-Project</a>
+        <div class="project-desc">Cross-country financial distress modeling using tree-based learners and bank-level indicators.</div>
+      </li>
     </ul>
   </div>
 
-  <script>
-    const username = "TosinSDGs"; // ← change this to your actual GitHub username
-    const repoList = document.getElementById("repo-list");
-
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
-      .then(response => response.json())
-      .then(repos => {
-        repoList.innerHTML = ""; // clear "loading..."
-        repos.slice(0, 6).forEach(repo => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-            <div class="project-desc">${repo.description || "No description provided."}</div>
-          `;
-          repoList.appendChild(li);
-        });
-      })
-      .catch(error => {
-        repoList.innerHTML = "<li>Failed to load repositories.</li>";
-        console.error(error);
-      });
-  </script>
+  <footer>
+    <p style="text-align:center;">&copy; 2025 Tosin Gbadegesin</p>
+  </footer>
 </body>
 </html>
