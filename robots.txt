@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tosinsdgs.github.io/sitemap.xml
