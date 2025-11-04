@@ -2,34 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CV / Bio - Tosin Gbadegesin</title>
+  <title>Bio / CV - Tosin Gbadegesin</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a, .dropdown button {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 14px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    nav a:hover, .dropdown:hover button {
+      color: #0077cc;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .jmp-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-top: 35px;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .jmp-section {
+        padding: 0 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
+
+    <div class="dropdown">
+      <button>Research ▾</button>
+      <div class="dropdown-content">
+        <a href="jobmarket.html">Job Market</a>
+        <a href="ongoing.html">Ongoing Research</a>
+        <a href="publications.html">Publications</a>
+      </div>
+    </div>
+
+    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="jmp-section">
     <h1>Bio</h1>
     <p>
-      Tosin Gbadegesin is a Ph.D. candidate in Economics at Howard University with almost a decade of experience applying data-driven solutions to complex policy and business problems. 
-      At the World Bank Group, he spearheads the design, strategy, and implementation of the IFC’s Private Sector Gender and Economic Inclusion Data Hub—overseeing technical development, integrating diverse data sources, 
-      and managing cross-functional teams to deliver high-impact analytics.
+      Tosin Gbadegesin is a Ph.D. candidate in Economics at Howard University with almost a decade of experience applying
+      data-driven solutions to complex policy and business problems. At the World Bank Group, she leads the design,
+      strategy, and implementation of the IFC’s <em>Private Sector Gender and Economic Inclusion Data Hub</em>—overseeing
+      technical development, integrating diverse data sources, and managing cross-functional teams to deliver high-impact analytics.
     </p>
+
     <p>
-      Tosin has supported high-stakes projects across multiple World Bank units and several organizations, leveraging econometric modeling, machine learning, and causal inference to inform strategy and investment decisions. 
-      Tosin holds an M.A. in Economics and is completing his Ph.D. at Howard University, with an M.Sc. in Sustainable Development from the University of Ibadan, Nigeria. 
-      He thrives in high-impact environments at the intersection of applied microeconomics, causal ML, energy, and environmental economics.
+      Tosin has contributed to high-stakes projects across multiple World Bank Group departments, applying econometric modeling,
+      machine learning, and causal inference to inform strategic decision-making and investment evaluation. Her work bridges the
+      intersection of <strong>applied microeconomics, causal ML, energy, and environmental economics</strong>, producing
+      actionable insights for policy and private sector development.
+    </p>
+
+    <p>
+      She holds an M.A. in Economics and is completing her Ph.D. at Howard University, along with an M.Sc. in Sustainable
+      Development from the University of Ibadan, Nigeria. Her academic and professional work are grounded in quantitative rigor,
+      policy relevance, and sustainable development goals.
     </p>
 
     <h2>Download CV</h2>
-    <p><a href="cv.pdf" target="_blank">Click here to view my full CV</a></p>
+    <p>
+      <a href="cv.pdf" target="_blank" rel="noopener">Click here to view or download my full CV (PDF)</a>
+    </p>
   </div>
 
   <footer>
