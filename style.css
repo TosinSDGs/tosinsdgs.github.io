@@ -1,142 +1,344 @@
-/* Base styles */
+/* ========== Base Styles ========== */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   color: #111;
   margin: 0;
   padding: 0;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
-.name-title {
-  font-size: 22px;
-  margin-bottom: 10px;
+/* Typography */
+h1, h2, h3 {
+  color: #003366;
+  margin-bottom: 8px;
 }
 
-.name-title .name-bold {
-  font-weight: bold;
-  font-size: 22px;
+p {
+  margin-bottom: 12px;
+  color: #333;
 }
 
-.name-title .title-regular {
-  font-weight: normal;
-  font-size: 18px;
-  margin-left: 5px;
-}
-
-/* Link styles */
+/* Link Styles */
 a {
-  color: #800000;
+  color: #0077cc;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #005999;
 }
 
-/* Navbar */
+/* ========== Navigation Bar ========== */
 nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   background-color: #f5f5f5;
-  padding: 15px 0;
-  text-align: center;
-  font-weight: bold;
+  padding: 10px;
+  flex-wrap: wrap;
   border-bottom: 1px solid #ccc;
 }
 
-nav a {
-  margin: 0 15px;
+nav a, .dropdown button {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 14px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
 }
 
-/* Layout */
-.main-container {
-  display: flex;
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+nav a:hover, .dropdown:hover button {
+  color: #0077cc;
 }
 
-.left-column {
-  width: 40%;
-  min-width: 300px;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.right-column {
-  width: 55%;
-  min-width: 300px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 6px;
   text-align: left;
 }
 
-.logo {
-  width: 200px;
-  margin-bottom: 10px;
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
 }
 
-.dept-label {
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.3;
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ========== Layout ========== */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Column (About Section) */
+.left-column {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.right-column {
+  flex: 1 1 45%;
+}
+
+/* Name and Title */
+.name-title {
+  font-size: 1.6em;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.title-regular {
+  font-weight: normal;
+  color: #003366;
+}
+
+.field-info {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Profile Image */
+.photo-inline {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Introduction Paragraph */
 .intro-text {
   font-size: 16px;
-  margin-top: 10px;
+  color: #333;
+  line-height: 1.6;
 }
 
-.intro-text p {
+/* Scholar / Social Links */
+.scholar-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0077cc;
+}
+
+.scholar-link img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ========== Section Cards (Job Market, Dissertation, etc.) ========== */
+.summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.summary-card {
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card h3 {
+  color: #003366;
   margin-bottom: 10px;
 }
 
-.photo-inline {
-  max-width: 100%;
-  width: 300px;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.fields, .references {
-  margin-bottom: 20px;
-}
-
-.fields h2, .references h2, .jmp-section h2 {
-  font-size: 20px;
-  border-bottom: 2px solid #eee;
+.summary-card p {
+  color: #333;
+  line-height: 1.6;
   margin-bottom: 10px;
 }
 
-.jmp-section {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 10px;
+.summary-card a {
+  color: #0077cc;
+  font-weight: bold;
 }
 
+.summary-card a:hover {
+  text-decoration: underline;
+}
+
+/* Technical Skills */
 .jmp-section h2 {
   margin-top: 20px;
   font-size: 22px;
   border-bottom: 2px solid #eee;
 }
 
-.jmp-section h3 {
+/* ========== Project Cards ========== */
+.project-list {
+  max-width: 950px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.project-list h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 35px;
+  font-size: 28px;
+  border-bottom: 2px solid #003366;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.project-card {
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  padding: 22px 25px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+  color: #003366;
+  font-weight: bold;
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  text-decoration: none;
 }
 
-.jmp-section p, .jmp-section ul {
+.project-card a:hover {
+  text-decoration: underline;
+  color: #0077cc;
+}
+
+.project-desc {
+  font-size: 15px;
+  color: #444;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* ========== Contact Form ========== */
+.contact-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.contact-container h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.jmp-section ul {
-  padding-left: 20px;
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
 }
 
+.contact-form button {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #005999;
+}
+
+/* ========== Footer ========== */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
   background-color: #f9f9f9;
-  margin-top: 30px;
   border-top: 1px solid #ccc;
+  margin-top: 50px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-column,
+  .left-column {
+    width: 100%;
+  }
+
+  .photo-inline {
+    width: 200px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .project-list {
+    padding: 0 15px;
+  }
 }
