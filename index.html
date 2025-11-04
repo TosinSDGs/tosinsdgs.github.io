@@ -6,7 +6,7 @@
 
   <!-- Mobile + SEO -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tosin Gbadegesin — Ph.D. candidate in Economics at Howard University. Research: Energy, Urban, and Environmental Economics; secondary interests in Labor and Health Economics. Job market paper, dissertation, projects, and CV." />
+  <meta name="description" content="Tosin Gbadegesin — Ph.D. candidate in Economics at Howard University. Research: Energy, Urban, and Environmental Economics; secondary interests in Labor and Health Economics. Job market paper, projects, and CV." />
   <meta name="robots" content="index, follow" />
 
   <!-- Canonical + Sitemap -->
@@ -129,13 +129,13 @@
     }
 
     .photo-inline {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
       margin-bottom: 15px;
-      border: 2px solid #ddd;
       background-color: transparent;
+      border: none;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
 
     .intro-text p {
@@ -196,9 +196,19 @@
     }
 
     .scholar-link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       margin-top: 10px;
       font-weight: bold;
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .scholar-link img {
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+      vertical-align: middle;
     }
 
     footer {
@@ -238,7 +248,6 @@
       </div>
     </div>
 
-    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
@@ -273,11 +282,14 @@
 
       <p>
         You can download my <a href="cv.pdf" target="_blank" rel="noopener">CV here</a> or view my
-        <a href="https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en" target="_blank" class="scholar-link">Google Scholar Profile</a>.
+        <a href="https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en" target="_blank" class="scholar-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar logo">
+          Google Scholar Profile
+        </a>.
       </p>
     </div>
 
-    <!-- Right Column: Technical Skills + Papers -->
+    <!-- Right Column: Technical Skills + Job Market -->
     <div class="right-column">
       <div class="jmp-section">
         <h2>Technical Skills</h2>
@@ -289,18 +301,9 @@
           <h3>Job Market Paper</h3>
           <p><strong>Building Energy Performance Standards: Impacts on Building Energy Efficiency and GHG Emissions in Washington, DC</strong></p>
           <p>
-            Evaluates the causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a pioneering U.S. policy requiring underperforming buildings to improve energy efficiency. Using panel data from 2012–2023, the paper estimates BEPS effects on energy use intensity and GHG emissions while exploring heterogeneity across ownership types. Results indicate substantial improvements in efficiency and emissions outcomes, particularly among low-performing buildings, offering new empirical evidence for the policy’s role in advancing urban decarbonization.
+            Evaluates the causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a pioneering U.S. policy requiring underperforming buildings to improve energy efficiency. Using panel data from 2012–2023, the study quantifies BEPS effects on energy use intensity and GHG emissions while exploring differences across ownership types. Results indicate substantial improvements in efficiency and emissions performance, especially among buildings with large pre-policy compliance gaps, providing early empirical evidence on the effectiveness of performance-based standards in driving urban decarbonization.
           </p>
           <p><a href="jobmarket.html">Read more →</a></p>
-        </div>
-
-        <div class="summary-card">
-          <h3>Dissertation</h3>
-          <p><strong>Climate Change, Energy Demand, and Policy Impacts: Analyzing Residential and Building Energy Dynamics in the U.S.</strong></p>
-          <p>
-            Investigates how climate change intensifies household and building energy demand while assessing the effectiveness of performance-based energy policies. Combines distributional econometrics, causal ML, and panel causal inference to generate evidence for equitable energy transitions.
-          </p>
-          <p><a href="dissertation.html">Read more →</a></p>
         </div>
       </div>
     </div>
