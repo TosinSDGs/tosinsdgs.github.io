@@ -162,12 +162,23 @@
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
+      margin-top: 60px;
+      padding: 20px 0;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+      color: #333;
+      font-weight: 500;
     }
 
     @media (max-width: 768px) {
@@ -207,7 +218,7 @@
 
     <h2>Summary</h2>
     <p>
-      The accelerating urgency of climate change has prompted cities to implement performance-based energy policies aimed at reducing emissions from the built environment. This study evaluates the ex post causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a first-of-its-kind U.S. policy mandating energy efficiency improvements in underperforming buildings. Using panel data from 2012–2023, the study investigates whether BEPS has generated measurable reductions in building energy use intensity (EUI) and greenhouse gas (GHG) emissions and how impacts vary across building ownership types. Unlike prior modeling and simulation studies (Andrews & Jain 2023; Webb & McConnell 2023; Palmer & Walls 2017), this analysis provides empirical evidence on realized outcomes. The findings reveal that BEPS led to significant improvements in energy efficiency and emissions performance, particularly among buildings with the largest pre-policy compliance gaps. By evaluating one of the earliest operational BEPS regimes, the study provides timely evidence for the effectiveness of performance-based standards in advancing urban decarbonization.
+      The accelerating urgency of climate change has prompted cities to implement performance-based energy policies aimed at reducing emissions from the built environment. This study evaluates the ex post causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a first-of-its-kind U.S. policy mandating energy efficiency improvements in underperforming buildings. Using panel data from 2012–2023, the study investigates whether BEPS has generated measurable reductions in building energy use intensity (EUI) and greenhouse gas (GHG) emissions and how impacts vary across building ownership types. The findings reveal that BEPS led to significant improvements in energy efficiency and emissions performance, particularly among buildings with the largest pre-policy compliance gaps.
     </p>
 
     <h2>Data and Hypotheses</h2>
@@ -272,18 +283,6 @@
         <td>-0.566*** (0.063)</td>
         <td>-0.728*** (0.035)</td>
       </tr>
-      <tr>
-        <td>Building FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-      </tr>
-      <tr>
-        <td>Year FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-      </tr>
-      <tr>
-        <td>Observations</td><td>11,654</td><td>11,654</td><td>10,980</td><td>11,654</td><td>11,654</td>
-      </tr>
-      <tr>
-        <td>R² (within)</td><td>0.097</td><td>0.236</td><td>0.063</td><td>0.130</td><td>-2.427</td>
-      </tr>
     </table>
 
     <p style="font-size: 0.9em; text-align:center;">
@@ -297,7 +296,7 @@
 
     <h2>Contribution</h2>
     <p>
-      This study contributes to the literature on energy policy evaluation, urban decarbonization, and building energy economics in several ways. First, it provides one of the first ex post causal analyses of BEPS, complementing prior ex ante modeling efforts. Second, it extends the methodological frontier by applying a continuous-treatment TWFE framework, offering a scalable approach to evaluate policies with varying intensity. Third, disaggregating results by ownership type shows public buildings achieving greater emissions reductions while private buildings improve efficiency more sharply. The results demonstrate that performance-based standards can deliver measurable decarbonization when paired with transparency and flexible compliance.
+      This study contributes to the literature on energy policy evaluation, urban decarbonization, and building energy economics by providing one of the first ex post causal analyses of BEPS. It applies a continuous-treatment TWFE framework, offering a scalable approach for evaluating policies with varying intensity. Disaggregating results by ownership type reveals public buildings achieving greater emissions reductions, while private buildings show sharper energy efficiency gains — highlighting BEPS as a model for equitable and performance-based climate policy.
     </p>
 
     <div class="download-link">
@@ -308,6 +307,6 @@
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
-        
+
 </body>
 </html>
