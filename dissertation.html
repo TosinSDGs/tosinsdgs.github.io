@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dissertation - Tosin Gbadegesin</title>
+  <title>Dissertation – Tosin Gbadegesin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dissertation by Tosin Gbadegesin – Ph.D. Candidate in Economics at Howard University, focusing on climate, energy demand, and building performance policy impacts in the U.S." />
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -13,6 +15,7 @@
       gap: 15px;
       background-color: #f5f5f5;
       padding: 10px;
+      flex-wrap: wrap;
     }
 
     nav a, .dropdown button {
@@ -61,7 +64,7 @@
       display: block;
     }
 
-    /* Content Styling */
+    /* Dissertation Page Layout */
     .dissertation-section {
       max-width: 950px;
       margin: 50px auto;
@@ -74,7 +77,7 @@
       color: #003366;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 700;
-      font-size: 1.8em;
+      font-size: 1.9em;
       margin-bottom: 30px;
     }
 
@@ -93,12 +96,30 @@
       font-size: 1em;
     }
 
+    .graph-placeholder {
+      margin: 40px 0;
+      text-align: center;
+      border: 2px dashed #ccc;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      color: #666;
+      font-style: italic;
+    }
+
     footer {
       text-align: center;
       margin-top: 60px;
       padding: 20px;
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .dissertation-section {
+        padding: 0 15px;
+      }
     }
   </style>
 </head>
@@ -112,15 +133,16 @@
       <button>Research ▾</button>
       <div class="dropdown-content">
         <a href="jobmarket.html">Job Market</a>
-        <a href="publications.html">Publications</a>
         <a href="ongoing.html">Ongoing Research</a>
-        <a href="dissertation.html">Dissertation</a>
+        <a href="publications.html">Publications</a>
       </div>
     </div>
 
+    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="dissertation-section">
@@ -138,8 +160,12 @@
       The second study extends this inquiry by applying causal machine learning methods—CATE, CQTE, and CSQTE—to RECS 2020 data. This framework quantifies heterogeneous and distributional treatment effects of cooling demand while projecting them onto key household characteristics such as income, race, housing type, and air conditioning system. Across the full sample, CATE learners yield consistent median effects of about 0.32, corresponding to a 38% increase in electricity consumption under above-average cooling conditions. Distributional results underscore vulnerability at the lower tail, with CSQTE effects of 0.29 (≈34%) at the 25th quantile versus 0.20 (≈22%) at the 75th. OLS projections show systematic heterogeneity: evaporative cooler households face increases exceeding 60%, middle-income households ($60k–$79k) peak at ≈51%, and minority households record burdens above 70%. Housing type amplifies disparities, with mobile and single-family homes more exposed than apartments. Robustness checks confirm stability across alternative climate definitions, reinforcing that cooling-driven electricity burdens are heterogeneous, persistent, and disproportionately concentrated among vulnerable subgroups.
     </p>
 
+    <div class="graph-placeholder">
+      Figure 1: Graph Placeholder – Insert Key Illustration or Framework Diagram Here
+    </div>
+
     <p>
-      The policy evaluation in Chapter 4 complements the household-level analysis by examining Washington, DC’s Building Energy Performance Standards (BEPS) introduced under the Clean Energy Omnibus Act of 2018. Using a two-way fixed effects framework with continuous treatment intensity and complementary event-study model, the analysis shows that buildings with greater pre-policy compliance shortfalls experience larger post-policy improvements. A 10-unit shortfall reduces Site EUI by 3.4 kWh/ft², Source EUI by 4.7 kWh/ft², raises Energy Star scores by 4.1 points, and cuts emissions by 3.8 million KgCO₂e. Weighted estimates confirm even larger emissions reductions of 5.7 million KgCO₂e. Event-study evidence supports parallel pre-trends and shows the largest improvements after 2021, when compliance became binding. Heterogeneity by ownership show private buildings driving efficiency gains, while public buildings achieve stronger emissions reductions. Robustness checks across alternative compliance-gap definitions confirm that BEPS consistently reduces energy use and emissions.
+      The policy evaluation in Chapter 4 complements the household-level analysis by examining Washington, DC’s Building Energy Performance Standards (BEPS) introduced under the Clean Energy Omnibus Act of 2018. Using a two-way fixed effects framework with continuous treatment intensity and complementary event-study model, the analysis shows that buildings with greater pre-policy compliance shortfalls experience larger post-policy improvements. A 10-unit shortfall reduces Site EUI by 3.4 kWh/ft², Source EUI by 4.7 kWh/ft², raises Energy Star scores by 4.1 points, and cuts emissions by 3.8 million KgCO₂e. Weighted estimates confirm even larger emissions reductions of 5.7 million KgCO₂e. Event-study evidence supports parallel pre-trends and shows the largest improvements after 2021, when compliance became binding. Heterogeneity by ownership shows private buildings driving efficiency gains, while public buildings achieve stronger emissions reductions. Robustness checks across alternative compliance-gap definitions confirm that BEPS consistently reduces energy use and emissions.
     </p>
 
     <p>
@@ -153,4 +179,3 @@
 
 </body>
 </html>
-
