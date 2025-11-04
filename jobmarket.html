@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Job Market Paper - Tosin Gbadegesin</title>
+  <title>Job Market Paper – Tosin Gbadegesin</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Navigation Styles */
+    /* Navigation */
     nav {
       display: flex;
       justify-content: center;
       gap: 15px;
       background-color: #f5f5f5;
       padding: 10px;
+      flex-wrap: wrap;
     }
 
     nav a, .dropdown button {
@@ -61,17 +62,18 @@
       display: block;
     }
 
-    /* Content Styling */
+    /* Page Content */
     .jmp-section {
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
     }
 
     h1, h2, h3 {
       color: #003366;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 600;
     }
 
@@ -88,13 +90,14 @@
     p, li {
       text-align: justify;
       font-size: 1em;
-      color: #333;
+      margin-bottom: 12px;
     }
 
     ul {
-      margin-left: 20px;
+      margin-left: 25px;
     }
 
+    /* Table Styling */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -120,22 +123,7 @@
       margin-bottom: 5px;
     }
 
-    .download-link {
-      margin-top: 25px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .download-link a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    .download-link a:hover {
-      text-decoration: underline;
-    }
-
-    /* Graph Placeholder Section */
+    /* Figure / Graph Placeholder */
     .graph-placeholder {
       text-align: center;
       margin: 40px auto;
@@ -158,12 +146,34 @@
       margin-top: 10px;
     }
 
+    /* Download link */
+    .download-link {
+      margin-top: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .download-link a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .download-link a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       margin-top: 40px;
       padding: 20px;
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .jmp-section {
+        padding: 0 15px;
+      }
     }
   </style>
 </head>
@@ -172,19 +182,21 @@
 
   <nav>
     <a href="index.html">Home</a>
-    
+
     <div class="dropdown">
       <button>Research ▾</button>
       <div class="dropdown-content">
         <a href="jobmarket.html">Job Market</a>
-        <a href="publications.html">Publications</a>
         <a href="ongoing.html">Ongoing Research</a>
+        <a href="publications.html">Publications</a>
       </div>
     </div>
-    
+
+    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="jmp-section">
@@ -278,7 +290,6 @@
       Standard errors in parentheses. Significance: *** p < 0.01, ** p < 0.05, * p < 0.10.
     </p>
 
-    <!-- Graph Placeholder -->
     <div class="graph-placeholder">
       <p><strong>Figure 1:</strong> Event-Study Plots of BEPS Impacts</p>
       <img src="figure1_eventstudy.png" alt="Event Study Plot Placeholder">
@@ -286,29 +297,16 @@
 
     <h2>Contribution</h2>
     <p>
-      This study contributes to the literature on energy policy evaluation, urban decarbonization, and building energy economics in several ways. First, it provides one of the first ex post causal analyses of BEPS, complementing prior ex ante modeling efforts from Palmer & Walls (2017) and Andrews & Jain (2023). Second, it extends the methodological frontier by applying a continuous-treatment TWFE framework, offering a scalable approach to evaluate performance-based policies that vary in intensity. Third, by disaggregating results across ownership categories, the study shows that public buildings achieved greater emissions gains, while private buildings improved efficiency more sharply, confirming BEPS as an effective policy for urban decarbonization. Finally, the results have global policy relevance, showing that performance-based energy standards can achieve meaningful decarbonization when coupled with transparent benchmarking data and flexible compliance pathways.
-    </p>
-
-    <h2>References</h2>
-    <p>
-      Andrews, Abigail, and Rishee Jain. 2023. “Evaluating Building Decarbonization Potential in U.S. Cities under Emissions-Based Building Performance Standards and Load Flexibility Requirements.” <i>Journal of Building Engineering</i>, 76: 107375.<br><br>
-      Webb, Amanda, and Colby McConnell. 2023. "Evaluating the feasibility of achieving building performance standards targets." <i>Energy and Buildings</i>, 288: 112989.<br><br>
-      Palmer, Karen, and Margaret Walls. 2017. "Using information to close the energy efficiency gap: a review of benchmarking and disclosure ordinances." <i>Energy Efficiency</i>, 10(3): 673–691.<br><br>
-      District of Columbia Council. 2008. <i>Clean and Affordable Energy Act of 2008.</i> Washington, DC: DC Council. <a href="https://code.dccouncil.gov/us/dc/council/laws/17-250">[Link]</a><br><br>
-      District of Columbia Council. 2018. <i>Clean Energy DC Omnibus Amendment Act of 2018.</i> Washington, DC: DC Council. <a href="https://code.dccouncil.gov/us/dc/council/laws/22-257">[Link]</a><br><br>
-      District Department of Energy & Environment (DOEE). 2019. <i>Building Energy Performance Standards (BEPS) Program Guidebook.</i> Washington, DC: DOEE.<br><br>
-      District of Columbia Department of Energy & Environment (DOEE). 2021. <i>Building Energy Performance Standards (BEPS) Compliance Guidebook.</i> Washington, DC: Government of the District of Columbia. <a href="https://doee.dc.gov/service/building-energy-performance-standards-beps">[Link]</a>
+      This study contributes to the literature on energy policy evaluation, urban decarbonization, and building energy economics in several ways. First, it provides one of the first ex post causal analyses of BEPS, complementing prior ex ante modeling efforts. Second, it extends the methodological frontier by applying a continuous-treatment TWFE framework, offering a scalable approach to evaluate policies with varying intensity. Third, disaggregating results by ownership type shows public buildings achieving greater emissions reductions while private buildings improve efficiency more sharply. The results demonstrate that performance-based standards can deliver measurable decarbonization when paired with transparency and flexible compliance.
     </p>
 
     <div class="download-link">
       📄 <a href="TosinG_Job Market Paper2.pdf" target="_blank" rel="noopener">View Full Paper (PDF)</a>
     </div>
-
   </div>
 
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
-
 </body>
 </html>
