@@ -4,78 +4,152 @@
   <meta charset="UTF-8">
   <title>Research - Tosin Gbadegesin</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Dropdown Navigation Styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+
+    nav a, .dropdown button {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 14px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    nav a:hover, .dropdown:hover button {
+      color: #0077cc;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .section-card {
+      background-color: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 25px auto;
+      max-width: 800px;
+      padding: 25px;
+      text-align: left;
+      transition: 0.3s ease;
+    }
+
+    .section-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-card h2 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .section-card p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .section-card a {
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .section-card a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
+    
+    <div class="dropdown">
+      <button>Research ▾</button>
+      <div class="dropdown-content">
+        <a href="jobmarket.html">Job Market</a>
+        <a href="publications.html">Publications</a>
+        <a href="ongoing.html">Ongoing Research</a>
+      </div>
+    </div>
+    
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
   </nav>
 
   <div class="jmp-section">
-    <h1>Research</h1>
+    <h1>Research Overview</h1>
 
-    <h2>Research Interests</h2>
-    <p><strong>Primary Fields:</strong> Energy, Urban, and Environmental Economics</p>
-    <p><strong>Secondary Fields:</strong> Health and Labor Economics</p>
+    <div class="section-card">
+      <h2><a href="jobmarket.html">Job Market Paper</a></h2>
+      <p>
+        Explores heterogeneous and distributional impacts of climate-driven cooling demand on U.S. household electricity consumption using causal machine learning methods. The study combines the 2020 RECS dataset with modern causal inference techniques to estimate CATE, CQTE, and CSQTE across household types and energy profiles.
+      </p>
+      <p><a href="jobmarket.html">Read more →</a></p>
+    </div>
 
-    <h2>Job Market Paper</h2>
-    <h3>
-      <a href="TosinG_Job Market Paper.pdf" target="_blank" rel="noopener">
-        Heterogeneous Effects of Cooling Demand on Household Electricity Consumption using Causal ML Models
-      </a>
-    </h3>
-    <p>
-      This study examines the heterogeneous causal effects of climate-driven cooling demand on U.S. household electricity consumption using 2020 Residential Energy Consumption Survey data and a causal machine learning framework. Estimates of CATE, CQTE, and CSQTE show substantial increases in electricity consumption under elevated cooling degree days (CDD), with average effects of 32–34% and disproportionate burdens concentrated among lower-consuming households. OLS projections of CATE, CQTE, and CSQTE estimates highlight significant subgroup variation: households with central AC and evaporative coolers, middle-income earners ($60k–$79k), and minority racial groups face the highest burdens, while single-family homes exhibit consistently stronger responses than apartments or mobile homes. Robustness checks using alternative treatment definitions (CDD above the 75th percentile and 30-year average CDD) confirm the stability of results. These findings underscore that climate-driven cooling demand exacerbates distributional inequalities in energy use, reinforcing the need for targeted efficiency and adaptation policies that account for the vulnerabilities of specific subgroups.
-    </p>
-    <p>
-      📄 <a href="TosinG_Job Market Paper.pdf" download>Download Full Paper (PDF)</a>
-    </p>
+    <div class="section-card">
+      <h2><a href="publications.html">Publications</a></h2>
+      <p>
+        A collection of peer-reviewed journal articles, policy papers, and book chapters covering topics in energy economics, climate policy, and urban sustainability — including works published in <i>Energy & Environment</i>, <i>Defence and Peace Economics</i>, and <i>World Bank Policy Research Working Papers</i>.
+      </p>
+      <p><a href="publications.html">View publications →</a></p>
+    </div>
 
-    <h2>Work in Progress</h2>
-    <ul>
-      <li>Impact of Climate Change on Electricity Demand and Electricity Cost in U.S. Residential Households</li>
-      <li>The Building Energy Performance Standard Program: Impacts on Buildings’ Energy Efficiency and GHG Emissions in Washington, DC</li>
-      <li>Beyond Affordability: A Spatial Econometric Analysis of Renter Cost Burdens and Social Determinants in the United States</li>
-    </ul>
-
-    <h2>Publications</h2>
-    <ul>
-      <li>“Climate Change and Energy Dynamics: Evidence from BRICS and G7 Countries,” <i>Energy & Environment</i>, 2024, 0(0). <a href="https://journals.sagepub.com/doi/10.1177/0958305X241302692">[Link]</a></li>
-      <li>“Evaluating the Economic Impact of the G20 Compact Initiative: Evidence from Causal Inference Using Advanced Machine” (with N. Yameogo), <i>Journal of Sustainable Development</i>, 2024, 17(5), 56–76. <a href="https://ccsenet.org/journal/index.php/jsd/article/view/0/50548">[Link]</a></li>
-      <li>“Defense Expenditure and National Well-Being: Evidence from the G7 Countries,” <i>Defence and Peace Economics</i>, 2024, 1–12. <a href="https://www.tandfonline.com/doi/full/10.1080/10242694.2024.2413232">[Link]</a></li>
-      <li>“Effectiveness of Collective Action in Reducing Transaction Cost for Smallholder Paddy Farmers in Tanzania” (with L. Popoola), <i>African Journal of Economic and Sustainable Development</i>, 2020, 7(4), 391–404. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/AJESD.2020.106828">[Link]</a></li>
-      <li>“Water Availability Challenges in Low-Income Areas of Agbowo Community, Ibadan, Nigeria” (with O. Olayide), <i>International Journal of Circular Economy and Waste Management</i>, 2021, 1(1), 81–96. <a href="https://www.igi-global.com/gateway/article/263504">[Link]</a></li>
-      <li>“Assessment of Women and Children Vulnerability to Water Use in Low-Income Urban Area of Agbowo Community, Ibadan, Nigeria” (with O. Olayide), <i>International Journal of Sustainability Management and Information Technologies</i>, 2019, 5(2), 29–34. <a href="https://www.sciencepublishinggroup.com/article/10.11648/j.ijsmit.20190502.11">[Link]</a></li>
-      <li>“Transaction Cost Factors Affecting the Economic Life of Smallholder Paddy Farmers in Tanzania” (with L. Popoola and L. Muhoni), <i>Africa Journal of Sustainable Development</i>, 2019, 8(1). <a href="https://www.researchgate.net/publication/338558356_Transaction_Cost_Factors_Affecting_the_Economic_Life_of_Smallholder_Paddy_Farmers_in_Tanzania">[Link]</a></li>
-    </ul>
-
-    <h2>World Bank Group Papers</h2>
-    <ul>
-      <li>“Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan” (with B. P. J. Andree and A. Braimoh), <i>Policy Research Working Paper, World Bank Group (PLANET)</i>, 2024. <a href="http://documents.worldbank.org/curated/en/099903212122414533/IDU18ea67e261706514cf21842c1d1f2cfc6bedd">[Link]</a></li>
-      <li>“Reproducibility Package for Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan” (with B. P. J. Andree), <i>World Bank Policy Research Working Papers</i>, 2024. <a href="https://reproducibility.worldbank.org/index.php/catalog/232/study-description#project_desc_container1674845066822">[Link]</a></li>
-    </ul>
-
-    <h2>World Bank Group Reports</h2>
-    <ul>
-      <li><i>Closing the Gap: A Data Outlook on Women's Economic Opportunities. </i>. International Finance Corporation, 2025. <a href="https://www.ifc.org/en/insights-reports/2025/closing-the-gap">[Link]</a></li>
-      <li><i>Repurposing power markets: The path to sustainable and affordable energy for all</i>. International Finance Corporation, 2024. <a href="https://www.ifc.org/en/insights-reports/2024/repurposing-power-markets-for-sustainable-and-affordable-energy">[Link]</a></li>
-      <li><i>Compact monitoring report: Africa Advisory Group meeting, November 2023</i>. The World Bank Group, 2023. <a href="https://thedocs.worldbank.org/en/doc/d47e065b71247ba031d57c3d1da09faf-0630012024/original/CwA-Monitoring-Report-Nov-2023-Nov15-Final.pdf">[Link]</a></li>
-    </ul>
-
-    <h2>Book Chapters</h2>
-    <ul>
-      <li>“A Review on Impact of Changing Climate on Sustainable Food Consumption,” in <i>Global Food Politics and Approaches to Sustainable Consumption</i>, 2020, 54–76. <a href="https://www.igi-global.com/gateway/chapter/235149">[Link]</a></li>
-      <li>“Climate Change Implication on Airborne Infections: Roadmap for Nigeria’s Health Sector Development,” in <i>Handbook of Climate Change Resilience</i>, 2018, 1–10. <a href="https://doi.org/10.1007/978-3-319-71025-9_131-1">[Link]</a></li>
-    </ul>
-    
-   <h2>Blog</h2>
-    <ul>
-      <li>“Better Data for Better Outcomes: New Tools and Analysis to Break Afghanistan’s Food Security Crisis” (with B. P. J. Andree and A. Braimoh), <i>World Bank Blogs</i>, 2025. <a href="https://blogs.worldbank.org/en/opendata/better-data-for-better-outcomes--new-tools-and-analysis-top-brea">[Link]</a></li>
-    </ul>     
+    <div class="section-card">
+      <h2><a href="ongoing.html">Ongoing Research</a></h2>
+      <p>
+        Current projects include examining climate-driven cooling demand and its economic implications, and a spatial econometric study of renter affordability and housing inequalities in the U.S. These studies highlight equity and adaptation challenges in the intersection of energy, climate, and housing policy.
+      </p>
+      <p><a href="ongoing.html">Explore ongoing research →</a></p>
+    </div>
   </div>
 
   <footer>
