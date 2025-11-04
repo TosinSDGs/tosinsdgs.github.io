@@ -36,7 +36,8 @@
     },
     "email": "mailto:tosingbadegesin@bison.howard.edu",
     "image": "https://tosinsdgs.github.io/tosin.jpg",
-    "url": "https://tosinsdgs.github.io/"
+    "url": "https://tosinsdgs.github.io/",
+    "sameAs": ["https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en"]
   }
   </script>
 
@@ -115,20 +116,26 @@
     }
 
     .name-title {
-      font-size: 1.5em;
+      font-size: 1.6em;
       color: #003366;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+    }
+
+    .field-info {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 15px;
     }
 
     .photo-inline {
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      object-fit: contain;
+      object-fit: cover;
       margin-bottom: 15px;
-      border: 1px solid #ddd;
-      background-color: #fff;
+      border: 2px solid #ddd;
+      background-color: transparent;
     }
 
     .intro-text p {
@@ -146,7 +153,6 @@
       margin-top: 30px;
     }
 
-    /* Summary cards container (right column) */
     .summary-wrapper {
       display: flex;
       flex-direction: column;
@@ -187,6 +193,12 @@
 
     .summary-card a:hover {
       text-decoration: underline;
+    }
+
+    .scholar-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
     }
 
     footer {
@@ -241,17 +253,28 @@
         <span class="title-regular">Ph.D. Candidate in Economics</span>
       </h1>
 
+      <p class="field-info">
+        <strong>Major Field:</strong> Energy & Environmental Economics<br>
+        <strong>Minor Field:</strong> Urban & Labor Economics
+      </p>
+
       <img src="tosin.jpg" alt="Portrait of Tosin Gbadegesin" class="photo-inline">
+
       <p><strong>Email:</strong>
         <a href="mailto:tosingbadegesin@bison.howard.edu">tosingbadegesin@bison.howard.edu</a>,
         <a href="mailto:tosingbade05@gmail.com">tosingbade05@gmail.com</a>
       </p>
+
       <p>
         I am a Ph.D. candidate in Economics at Howard University. My research explores the intersection of
         climate, energy, and urban economics — with a focus on climate-driven energy demand, policy evaluation,
         and equity in adaptation outcomes.
       </p>
-      <p>You can download my <a href="cv.pdf" target="_blank" rel="noopener">CV here</a>.</p>
+
+      <p>
+        You can download my <a href="cv.pdf" target="_blank" rel="noopener">CV here</a> or view my
+        <a href="https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en" target="_blank" class="scholar-link">Google Scholar Profile</a>.
+      </p>
     </div>
 
     <!-- Right Column: Technical Skills + Papers -->
@@ -266,7 +289,7 @@
           <h3>Job Market Paper</h3>
           <p><strong>Building Energy Performance Standards: Impacts on Building Energy Efficiency and GHG Emissions in Washington, DC</strong></p>
           <p>
-            This study evaluates the causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS) using panel data from 2012–2023. It estimates BEPS effects on building energy efficiency and GHG emissions while examining heterogeneity across ownership types.
+            Evaluates the causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a pioneering U.S. policy requiring underperforming buildings to improve energy efficiency. Using panel data from 2012–2023, the paper estimates BEPS effects on energy use intensity and GHG emissions while exploring heterogeneity across ownership types. Results indicate substantial improvements in efficiency and emissions outcomes, particularly among low-performing buildings, offering new empirical evidence for the policy’s role in advancing urban decarbonization.
           </p>
           <p><a href="jobmarket.html">Read more →</a></p>
         </div>
