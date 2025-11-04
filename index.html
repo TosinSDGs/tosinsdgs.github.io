@@ -6,32 +6,26 @@
 
   <!-- Mobile + basic SEO -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tosin Gbadegesin — Ph.D. candidate in Economics at Howard University. Research: Energy, Urban, and Environmental Economics; secondary interests in Labor and Health Economics. Publications, projects, and CV." />
+  <meta name="description" content="Tosin Gbadegesin — Ph.D. candidate in Economics at Howard University. Research: Energy, Urban, and Environmental Economics; secondary interests in Labor and Health Economics. Job market paper, dissertation, projects, and CV." />
   <meta name="robots" content="index, follow" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://tosinsdgs.github.io/" />
 
-  <!-- ✅ Sitemap for Search Engines -->
+  <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://tosinsdgs.github.io/sitemap.xml" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph (for LinkedIn, Facebook, etc.) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tosin Gbadegesin – Ph.D. Candidate in Economics" />
-  <meta property="og:description" content="Energy, Urban, and Environmental Economics — publications, projects, and CV." />
+  <meta property="og:description" content="Energy, Urban, and Environmental Economics — job market paper, dissertation, and projects." />
   <meta property="og:url" content="https://tosinsdgs.github.io/" />
   <meta property="og:image" content="https://tosinsdgs.github.io/tosin.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tosin Gbadegesin – Ph.D. Candidate in Economics" />
-  <meta name="twitter:description" content="Energy, Urban, and Environmental Economics — publications, projects, and CV." />
-  <meta name="twitter:image" content="https://tosinsdgs.github.io/tosin.jpg" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Structured Data (JSON-LD): Person + Website -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,6 +38,7 @@
     }
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,14 +54,168 @@
     "url": "https://tosinsdgs.github.io/"
   }
   </script>
+
+  <style>
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+
+    nav a, .dropdown button {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 14px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    nav a:hover, .dropdown:hover button {
+      color: #0077cc;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .left-column {
+      flex: 1 1 45%;
+    }
+
+    .right-column {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+
+    .name-title {
+      font-size: 1.5em;
+      color: #003366;
+    }
+
+    .photo-inline {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .jmp-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 8px;
+    }
+
+    .summary-card {
+      background-color: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 25px auto;
+      max-width: 850px;
+      padding: 25px;
+      text-align: left;
+      transition: 0.3s ease;
+    }
+
+    .summary-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .summary-card h3 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .summary-card p {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .summary-card a {
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .summary-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+  </style>
 </head>
+
 <body>
+
   <nav>
     <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
+
+    <div class="dropdown">
+      <button>Research ▾</button>
+      <div class="dropdown-content">
+        <a href="jobmarket.html">Job Market</a>
+        <a href="ongoing.html">Ongoing Research</a>
+      </div>
+    </div>
+
+    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
-    <a href="project.html">Projects</a>
+    <a href="projects.html">Projects</a>
   </nav>
 
   <div class="main-container">
@@ -78,7 +227,7 @@
       <section class="fields">
         <h2>Research Fields</h2>
         <p><strong>Primary:</strong> Energy & Environmental Economics</p>
-        <p><strong>Secondary:</strong> Urban & Labor Economics </p>
+        <p><strong>Secondary:</strong> Urban & Labor Economics</p>
       </section>
 
       <section class="references">
@@ -100,14 +249,14 @@
 
       <div class="intro-text">
         <img src="tosin.jpg" alt="Portrait of Tosin Gbadegesin" class="photo-inline">
-        <p><strong>Email Address:</strong>
+        <p><strong>Email:</strong>
           <a href="mailto:tosingbadegesin@bison.howard.edu">tosingbadegesin@bison.howard.edu</a>,
           <a href="mailto:tosingbade05@gmail.com">tosingbade05@gmail.com</a>
         </p>
         <p>
-          I am a Ph.D. candidate in Economics at Howard University.
-          My research focuses on Energy, Urban, and Environmental Economics,
-          with secondary interests in labor and health economics.
+          I am a Ph.D. candidate in Economics at Howard University. My research explores the intersection of
+          climate, energy, and urban economics — with a focus on climate-driven energy demand, policy evaluation,
+          and equity in adaptation outcomes.
         </p>
         <p>You can download my <a href="cv.pdf" target="_blank" rel="noopener">CV here</a>.</p>
       </div>
@@ -115,71 +264,33 @@
   </div>
 
   <div class="jmp-section">
-    <h2>Programs</h2>
-    <p>Python, R, Stata, IBM SPSS, Google Earth, Tableau, KNIME, MATLAB, PowerBI, SQL, HTML, ArcGIS, JavaScript, GitHub, Azure, and AWS services.</p>
+    <h2>Technical Skills</h2>
+    <p>Python, R, Stata, SQL, JavaScript, HTML, ArcGIS, PowerBI, Tableau, MATLAB, KNIME, Google Earth, IBM SPSS, Azure, and AWS.</p>
   </div>
-  
-  <div class="jmp-section">
-    <h2>Job Market Paper</h2>
-    <h3>
-      <a href="TosinG_Job Market Paper.pdf" target="_blank" rel="noopener">
-        Heterogeneous Effects of Cooling Demand on Household Electricity Consumption using Causal ML Models
-      </a>
-    </h3>
+
+  <!-- Job Market Paper Summary -->
+  <div class="summary-card">
+    <h3>Job Market Paper</h3>
+    <p><strong>Heterogeneous Effects of Cooling Demand on Household Electricity Consumption using Causal ML Models</strong></p>
     <p>
-      This study examines the heterogeneous causal effects of climate-driven cooling demand on U.S. household electricity consumption using 2020 Residential Energy Consumption Survey data and a causal machine learning framework. Estimates of CATE, CQTE, and CSQTE show substantial increases in electricity consumption under elevated cooling degree days (CDD), with average effects of 32–34% and disproportionate burdens concentrated among lower-consuming households. OLS projections of CATE, CQTE, and CSQTE estimates highlight significant subgroup variation: households with central AC and evaporative coolers, middle-income earners ($60k–$79k), and minority racial groups face the highest burdens, while single-family homes exhibit consistently stronger responses than apartments or mobile homes. Robustness checks using alternative treatment definitions (CDD above the 75th percentile and 30-year average CDD) confirm the stability of results. These findings underscore that climate-driven cooling demand exacerbates distributional inequalities in energy use, reinforcing the need for targeted efficiency and adaptation policies that account for the vulnerabilities of specific subgroups.
+      Examines how climate-driven cooling demand affects U.S. household electricity consumption using RECS 2020 data and causal machine learning models. Results reveal heterogeneous and distributional impacts, with low-consuming and minority households facing higher burdens — highlighting energy inequality in the face of climate change.
     </p>
-    <p>
-      📄 <a href="TosinG_Job Market Paper.pdf" download>Download Full Paper (PDF)</a>
-    </p>
+    <p><a href="jobmarket.html">Read more →</a></p>
   </div>
- 
-  <div class="jmp-section">
-    <h2>Work in Progress</h2>
-    <ul>
-      <li>Impact of Climate Change on Electricity Demand and Electricity Cost in U.S. Residential Households</li>
-      <li>The Building Energy Performance Standard Program: Impacts on Buildings’ Energy Efficiency and GHG Emissions in Washington, DC</li>
-      <li>Beyond Affordability: A Spatial Econometric Analysis of Renter Cost Burdens and Social Determinants in the United States</li>
-    </ul>
 
-    <h2>Publications</h2>
-    <ul>
-      <li>“Climate Change and Energy Dynamics: Evidence from BRICS and G7 Countries,” <i>Energy & Environment</i>, 2024, 0(0). <a href="https://journals.sagepub.com/doi/10.1177/0958305X241302692">[Link]</a></li>
-      <li>“Evaluating the Economic Impact of the G20 Compact Initiative: Evidence from Causal Inference Using Advanced Machine” (with N. Yameogo), <i>Journal of Sustainable Development</i>, 2024, 17(5), 56–76. <a href="https://ccsenet.org/journal/index.php/jsd/article/view/0/50548">[Link]</a></li>
-      <li>“Defense Expenditure and National Well-Being: Evidence from the G7 Countries,” <i>Defence and Peace Economics</i>, 2024, 1–12. <a href="https://www.tandfonline.com/doi/full/10.1080/10242694.2024.2413232">[Link]</a></li>
-      <li>“Effectiveness of Collective Action in Reducing Transaction Cost for Smallholder Paddy Farmers in Tanzania” (with L. Popoola), <i>African Journal of Economic and Sustainable Development</i>, 2020, 7(4), 391–404. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/AJESD.2020.106828">[Link]</a></li>
-      <li>“Water Availability Challenges in Low-Income Areas of Agbowo Community, Ibadan, Nigeria” (with O. Olayide), <i>International Journal of Circular Economy and Waste Management</i>, 2021, 1(1), 81–96. <a href="https://www.igi-global.com/gateway/article/263504">[Link]</a></li>
-      <li>“Assessment of Women and Children Vulnerability to Water Use in Low-Income Urban Area of Agbowo Community, Ibadan, Nigeria” (with O. Olayide), <i>International Journal of Sustainability Management and Information Technologies</i>, 2019, 5(2), 29–34. <a href="https://www.sciencepublishinggroup.com/article/10.11648/j.ijsmit.20190502.11">[Link]</a></li>
-      <li>“Transaction Cost Factors Affecting the Economic Life of Smallholder Paddy Farmers in Tanzania” (with L. Popoola and L. Muhoni), <i>Africa Journal of Sustainable Development</i>, 2019, 8(1). <a href="https://www.researchgate.net/publication/338558356_Transaction_Cost_Factors_Affecting_the_Economic_Life_of_Smallholder_Paddy_Farmers_in_Tanzania">[Link]</a></li>
-    </ul>
-
-    <h2>World Bank Group Papers</h2>
-    <ul>
-      <li>“Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan” (with B. P. J. Andree and A. Braimoh), <i>Policy Research Working Paper, World Bank Group (PLANET)</i>, 2024. <a href="http://documents.worldbank.org/curated/en/099903212122414533/IDU18ea67e261706514cf21842c1d1f2cfc6bedd">[Link]</a></li>
-      <li>“Reproducibility Package for Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan” (with B. P. J. Andree), <i>World Bank Policy Research Working Papers</i>, 2024. <a href="https://reproducibility.worldbank.org/index.php/catalog/232/study-description#project_desc_container1674845066822">[Link]</a></li>
-    </ul>
-
-    <h2>World Bank Group Reports</h2>
-    <ul>
-      <li><i>Closing the Gap: A Data Outlook on Women's Economic Opportunities. </i>. International Finance Corporation, 2025. <a href="https://www.ifc.org/en/insights-reports/2025/closing-the-gap">[Link]</a></li>
-      <li><i>Repurposing power markets: The path to sustainable and affordable energy for all</i>. International Finance Corporation, 2024. <a href="https://www.ifc.org/en/insights-reports/2024/repurposing-power-markets-for-sustainable-and-affordable-energy">[Link]</a></li>
-      <li><i>Compact monitoring report: Africa Advisory Group meeting, November 2023</i>. The World Bank Group, 2023. <a href="https://thedocs.worldbank.org/en/doc/d47e065b71247ba031d57c3d1da09faf-0630012024/original/CwA-Monitoring-Report-Nov-2023-Nov15-Final.pdf">[Link]</a></li>
-    </ul>
-
-    <h2>Book Chapters</h2>
-    <ul>
-      <li>“A Review on Impact of Changing Climate on Sustainable Food Consumption,” in <i>Global Food Politics and Approaches to Sustainable Consumption</i>, 2020, 54–76. <a href="https://www.igi-global.com/gateway/chapter/235149">[Link]</a></li>
-      <li>“Climate Change Implication on Airborne Infections: Roadmap for Nigeria’s Health Sector Development,” in <i>Handbook of Climate Change Resilience</i>, 2018, 1–10. <a href="https://doi.org/10.1007/978-3-319-71025-9_131-1">[Link]</a></li>
-    </ul>
-    
-   <h2>Blog</h2>
-    <ul>
-      <li>“Better Data for Better Outcomes: New Tools and Analysis to Break Afghanistan’s Food Security Crisis” (with B. P. J. Andree and A. Braimoh), <i>World Bank Blogs</i>, 2025. <a href="https://blogs.worldbank.org/en/opendata/better-data-for-better-outcomes--new-tools-and-analysis-top-brea">[Link]</a></li>
-    </ul> 
+  <!-- Dissertation Summary -->
+  <div class="summary-card">
+    <h3>Dissertation</h3>
+    <p><strong>Climate Change, Energy Demand, and Policy Impacts: Analyzing Residential and Building Energy Dynamics in the U.S.</strong></p>
+    <p>
+      Investigates how climate change intensifies household and building energy demand while assessing the effectiveness of performance-based energy policies. Combines distributional econometrics, causal ML, and panel causal inference to generate evidence for equitable energy transitions.
+    </p>
+    <p><a href="dissertation.html">Read more →</a></p>
   </div>
 
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
+
 </body>
 </html>
