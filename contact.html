@@ -9,123 +9,119 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Page container */
+    /* --- Shared nav styles to match index.html --- */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a, .dropdown button {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 14px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav a:hover, .dropdown:hover button { color: #0077cc; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none; position: absolute; background-color: #fff; min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1; border-radius: 6px; text-align: left;
+    }
+    .dropdown-content a { color: #333; padding: 10px 15px; display: block; text-decoration: none; }
+    .dropdown-content a:hover { background-color: #f0f0f0; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* --- Success banner --- */
+    .top-banner {
+      position: fixed;
+      top: -64px;
+      left: 0; right: 0;
+      background: #0a8a4b;
+      color: #fff;
+      padding: 14px 18px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: .2px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.12);
+      transition: transform .35s ease, top .35s ease;
+      transform: translateY(-100%);
+      z-index: 9999;
+    }
+    .top-banner.show {
+      top: 0;
+      transform: translateY(0);
+    }
+
+    /* --- Contact page layout --- */
     .contact-wrap {
       max-width: 950px;
       margin: 40px auto 80px;
       padding: 0 20px;
     }
-
     h1.contact-title {
       text-align: center;
-      color: #2c3442;
+      color: #003366;
       letter-spacing: 1px;
       margin-bottom: 28px;
+      font-size: 1.8em;
     }
-
-    /* Form card */
     .contact-card {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      padding: 26px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 28px;
     }
-
-    /* Labels & inputs */
-    .form-row {
-      margin-bottom: 20px;
-    }
+    .form-row { margin-bottom: 20px; }
     label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #252c35;
+      display: block; font-weight: 700; margin-bottom: 8px; color: #252c35;
     }
     .req { color: #e21; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%; padding: 14px 16px;
+      border: 2px solid #2f74ff; border-radius: 8px; outline: none; font-size: 16px;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease; background: #fff;
+    }
+    input::placeholder, textarea::placeholder { color: #8aa0c2; }
+    textarea { min-height: 160px; resize: vertical; }
+    input:focus, textarea:focus { box-shadow: 0 0 0 4px rgba(47,116,255,0.15); border-color: #2f74ff; }
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 720px) { .row-2 { grid-template-columns: 1fr; } }
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border: 2px solid #2f74ff;
-      border-radius: 10px;
-      outline: none;
-      font-size: 16px;
-      transition: box-shadow 0.2s ease, border-color 0.2s ease;
-      background: #fff;
-    }
-    input::placeholder, textarea::placeholder {
-      color: #8aa0c2;
-    }
-    textarea {
-      min-height: 160px;
-      resize: vertical;
-    }
-    input:focus, textarea:focus {
-      box-shadow: 0 0 0 4px rgba(47,116,255,0.15);
-      border-color: #2f74ff;
-    }
-
-    /* 2-col responsive row */
-    .row-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-    @media (max-width: 720px) {
-      .row-2 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Buttons / status */
-    .btn-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-top: 8px;
-    }
+    .btn-row { display: flex; align-items: center; gap: 14px; margin-top: 8px; }
     .btn-primary {
-      background: #2f74ff;
-      color: #fff;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+      background: #2f74ff; color: #fff; border: none; padding: 12px 20px;
+      border-radius: 8px; font-weight: 700; cursor: pointer;
+      transition: transform .1s ease, box-shadow .2s ease, background .2s ease;
     }
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(47,116,255,0.25);
-      background: #1f64f0;
-    }
-    .btn-primary:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(47,116,255,0.25); background: #1f64f0; }
+    .btn-primary:disabled { opacity: .65; cursor: not-allowed; transform: none; box-shadow: none; }
 
-    .status {
-      font-size: 15px;
-    }
+    .status { font-size: 15px; }
     .status.ok { color: #0a8a4b; }
     .status.err { color: #c51d1d; }
 
-    /* Subtle note + honeypot (hidden) */
-    .small-note {
-      font-size: 13px;
-      color: #667;
-      margin-top: -8px;
-      margin-bottom: 8px;
-    }
+    .small-note { font-size: 13px; color: #667; margin-top: -8px; margin-bottom: 8px; }
     .hp-field { display: none !important; }
+
+    footer {
+      text-align: center; margin-top: 60px; padding: 20px;
+      background-color: #f9f9f9; border-top: 1px solid #ccc;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Success banner -->
+  <div id="banner" class="top-banner" role="alert" aria-live="polite">Message sent!</div>
+
+  <!-- NAV mirrors index.html (with Publications visible under Research) -->
   <nav>
     <a href="index.html">Home</a>
 
@@ -134,6 +130,7 @@
       <div class="dropdown-content">
         <a href="jobmarket.html">Job Market</a>
         <a href="ongoing.html">Ongoing Research</a>
+        <a href="publications.html">Publications</a>
       </div>
     </div>
 
@@ -145,10 +142,14 @@
   </nav>
 
   <div class="contact-wrap">
-    <h1 class="contact-title">CONTACT ME</h1>
+    <h1 class="contact-title">Contact Me</h1>
 
     <div class="contact-card">
-      <form id="contact-form">
+      <!--
+        ACTION: replace YOUR_FORMSPREE_ENDPOINT_HERE with your actual Formspree endpoint,
+        e.g. https://formspree.io/f/xxxxabcd
+      -->
+      <form id="contact-form" action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST" novalidate>
         <!-- Honeypot to reduce spam -->
         <input type="text" name="website" class="hp-field" autocomplete="off" tabindex="-1" aria-hidden="true" />
 
@@ -165,7 +166,7 @@
 
           <div class="form-row">
             <label for="phone">Phone <span class="req">*</span></label>
-            <input type="text" id="phone" name="phone" placeholder="Enter your phone number(+1-xxx-xxx-xxxx)" required />
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number (+1-xxx-xxx-xxxx)" required />
           </div>
         </div>
 
@@ -180,6 +181,11 @@
           <div class="small-note">I typically reply within 1–2 business days.</div>
         </div>
 
+        <!-- Optional: set a subject line in Formspree emails -->
+        <input type="hidden" name="_subject" value="Website Contact — tosinsdgs.github.io" />
+        <!-- Optional: redirect (not used since we do fetch & banner) -->
+        <!-- <input type="hidden" name="_redirect" value="https://tosinsdgs.github.io/contact.html?sent=1" /> -->
+
         <div class="btn-row">
           <button type="submit" class="btn-primary" id="sendBtn">Send Message</button>
           <span id="formStatus" class="status" role="status" aria-live="polite"></span>
@@ -188,41 +194,26 @@
     </div>
   </div>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    // Initialize EmailJS (replace with your PUBLIC KEY)
-    (function() {
-      emailjs.init('YOUR_PUBLIC_KEY_HERE'); // e.g., 'tSxAbCDEFghI_jKLM'
-    })();
-
+    // Submit via fetch to stay on-page and show animated banner
     const form = document.getElementById('contact-form');
     const statusEl = document.getElementById('formStatus');
     const sendBtn = document.getElementById('sendBtn');
+    const banner = document.getElementById('banner');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // honeypot check
-      if (form.website && form.website.value.trim() !== '') {
-        return; // likely a bot
-      }
+      // Honeypot trap
+      if (form.website && form.website.value.trim() !== '') return;
 
-      // gather params for template
-      const params = {
-        from_name: document.getElementById('name').value.trim(),
-        from_email: document.getElementById('email').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        subject: document.getElementById('subject').value.trim(),
-        message: document.getElementById('message').value.trim(),
+      // Basic validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-        // OPTIONAL: if your EmailJS template uses a dynamic recipient field
-        // put both emails (comma-separated) here and reference {{to_email}} in the template "To" field.
-        to_email: 'tosingbade05@gmail.com, tosingbadegesin@bison.howard.edu'
-      };
-
-      // basic front-end validation
-      if (!params.from_name || !params.from_email || !params.subject || !params.message) {
+      if (!name || !email || !subject || !message) {
         statusEl.textContent = 'Please complete all required fields.';
         statusEl.className = 'status err';
         return;
@@ -233,11 +224,28 @@
       sendBtn.disabled = true;
 
       try {
-        // Replace SERVICE_ID and TEMPLATE_ID with your EmailJS IDs
-        await emailjs.send('YOUR_SERVICE_ID_HERE', 'YOUR_TEMPLATE_ID_HERE', params);
-        statusEl.textContent = 'Message sent! Thank you.';
-        statusEl.className = 'status ok';
-        form.reset();
+        const formData = new FormData(form);
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (resp.ok) {
+          form.reset();
+          statusEl.textContent = '';
+          statusEl.className = 'status';
+
+          // Show success banner
+          banner.textContent = 'Message sent!';
+          banner.classList.add('show');
+
+          // Hide banner after 3 seconds
+          setTimeout(() => banner.classList.remove('show'), 3000);
+        } else {
+          statusEl.textContent = 'Sorry—something went wrong. Please try again or email me directly.';
+          statusEl.className = 'status err';
+        }
       } catch (err) {
         console.error(err);
         statusEl.textContent = 'Sorry—something went wrong. Please try again or email me directly.';
