@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Publications - Tosin Gbadegesin</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Publications – Tosin Gbadegesin</title>
+  <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Dropdown Navigation Styles */
+    /* Navigation */
     nav {
       display: flex;
       justify-content: center;
       gap: 15px;
       background-color: #f5f5f5;
       padding: 10px;
+      flex-wrap: wrap;
     }
 
     nav a, .dropdown button {
@@ -60,70 +61,129 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    /* Page Layout */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #003366;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-top: 35px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
-    
+
     <div class="dropdown">
       <button>Research ▾</button>
       <div class="dropdown-content">
         <a href="jobmarket.html">Job Market</a>
-        <a href="publications.html">Publications</a>
         <a href="ongoing.html">Ongoing Research</a>
+        <a href="publications.html">Publications</a>
       </div>
     </div>
-    
+
+    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="jmp-section">
+  <!-- Publications Content -->
+  <div class="container">
     <h1>Publications</h1>
 
     <ul>
-      <li>“Climate Change and Energy Dynamics: Evidence from BRICS and G7 Countries,” <i>Energy & Environment</i>, 2024, 0(0). <a href="https://journals.sagepub.com/doi/10.1177/0958305X241302692">[Link]</a></li>
-      <li>“Evaluating the Economic Impact of the G20 Compact Initiative: Evidence from Causal Inference Using Advanced Machine” (with N. Yameogo), <i>Journal of Sustainable Development</i>, 2024, 17(5), 56–76. <a href="https://ccsenet.org/journal/index.php/jsd/article/view/0/50548">[Link]</a></li>
-      <li>“Defense Expenditure and National Well-Being: Evidence from the G7 Countries,” <i>Defence and Peace Economics</i>, 2024, 1–12. <a href="https://www.tandfonline.com/doi/full/10.1080/10242694.2024.2413232">[Link]</a></li>
-      <li>“Effectiveness of Collective Action in Reducing Transaction Cost for Smallholder Paddy Farmers in Tanzania” (with L. Popoola), <i>African Journal of Economic and Sustainable Development</i>, 2020, 7(4), 391–404. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/AJESD.2020.106828">[Link]</a></li>
-      <li>“Water Availability Challenges in Low-Income Areas of Agbowo Community, Ibadan, Nigeria” (with O. Olayide), <i>International Journal of Circular Economy and Waste Management</i>, 2021, 1(1), 81–96. <a href="https://www.igi-global.com/gateway/article/263504">[Link]</a></li>
-      <li>“Assessment of Women and Children Vulnerability to Water Use in Low-Income Urban Area of Agbowo Community, Ibadan, Nigeria” (with O. Olayide), <i>International Journal of Sustainability Management and Information Technologies</i>, 2019, 5(2), 29–34. <a href="https://www.sciencepublishinggroup.com/article/10.11648/j.ijsmit.20190502.11">[Link]</a></li>
-      <li>“Transaction Cost Factors Affecting the Economic Life of Smallholder Paddy Farmers in Tanzania” (with L. Popoola and L. Muhoni), <i>Africa Journal of Sustainable Development</i>, 2019, 8(1). <a href="https://www.researchgate.net/publication/338558356_Transaction_Cost_Factors_Affecting_the_Economic_Life_of_Smallholder_Paddy_Farmers_in_Tanzania">[Link]</a></li>
+      <li>“<strong>Climate Change and Energy Dynamics: Evidence from BRICS and G7 Countries</strong>,” <i>Energy & Environment</i>, 2024, 0(0). <a href="https://journals.sagepub.com/doi/10.1177/0958305X241302692">[Link]</a></li>
+      <li>“<strong>Evaluating the Economic Impact of the G20 Compact Initiative: Evidence from Causal Inference Using Advanced Machine Learning</strong>” (with N. Yameogo), <i>Journal of Sustainable Development</i>, 2024, 17(5), 56–76. <a href="https://ccsenet.org/journal/index.php/jsd/article/view/0/50548">[Link]</a></li>
+      <li>“<strong>Defense Expenditure and National Well-Being: Evidence from the G7 Countries</strong>,” <i>Defence and Peace Economics</i>, 2024, 1–12. <a href="https://www.tandfonline.com/doi/full/10.1080/10242694.2024.2413232">[Link]</a></li>
+      <li>“<strong>Effectiveness of Collective Action in Reducing Transaction Cost for Smallholder Paddy Farmers in Tanzania</strong>” (with L. Popoola), <i>African Journal of Economic and Sustainable Development</i>, 2020, 7(4), 391–404. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/AJESD.2020.106828">[Link]</a></li>
+      <li>“<strong>Water Availability Challenges in Low-Income Areas of Agbowo Community, Ibadan, Nigeria</strong>” (with O. Olayide), <i>International Journal of Circular Economy and Waste Management</i>, 2021, 1(1), 81–96. <a href="https://www.igi-global.com/gateway/article/263504">[Link]</a></li>
+      <li>“<strong>Assessment of Women and Children Vulnerability to Water Use in Low-Income Urban Area of Agbowo Community, Ibadan, Nigeria</strong>” (with O. Olayide), <i>International Journal of Sustainability Management and Information Technologies</i>, 2019, 5(2), 29–34. <a href="https://www.sciencepublishinggroup.com/article/10.11648/j.ijsmit.20190502.11">[Link]</a></li>
+      <li>“<strong>Transaction Cost Factors Affecting the Economic Life of Smallholder Paddy Farmers in Tanzania</strong>” (with L. Popoola and L. Muhoni), <i>Africa Journal of Sustainable Development</i>, 2019, 8(1). <a href="https://www.researchgate.net/publication/338558356_Transaction_Cost_Factors_Affecting_the_Economic_Life_of_Smallholder_Paddy_Farmers_in_Tanzania">[Link]</a></li>
     </ul>
 
     <h2>World Bank Group Papers</h2>
     <ul>
-      <li>“Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan” (with B. P. J. Andree and A. Braimoh), <i>Policy Research Working Paper, World Bank Group (PLANET)</i>, 2024. <a href="http://documents.worldbank.org/curated/en/099903212122414533/IDU18ea67e261706514cf21842c1d1f2cfc6bedd">[Link]</a></li>
-      <li>“Reproducibility Package for Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan” (with B. P. J. Andree), <i>World Bank Policy Research Working Papers</i>, 2024. <a href="https://reproducibility.worldbank.org/index.php/catalog/232/study-description#project_desc_container1674845066822">[Link]</a></li>
+      <li>“<strong>Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan</strong>” (with B. P. J. Andree and A. Braimoh), <i>Policy Research Working Paper, World Bank Group (PLANET)</i>, 2024. <a href="http://documents.worldbank.org/curated/en/099903212122414533/IDU18ea67e261706514cf21842c1d1f2cfc6bedd">[Link]</a></li>
+      <li>“<strong>Reproducibility Package for Climate Shocks and Their Effects on Food Security, Prices, and Agricultural Wages in Afghanistan</strong>” (with B. P. J. Andree), <i>World Bank Policy Research Working Papers</i>, 2024. <a href="https://reproducibility.worldbank.org/index.php/catalog/232/study-description#project_desc_container1674845066822">[Link]</a></li>
     </ul>
 
     <h2>World Bank Group Reports</h2>
     <ul>
       <li><i>Closing the Gap: A Data Outlook on Women's Economic Opportunities.</i> International Finance Corporation, 2025. <a href="https://www.ifc.org/en/insights-reports/2025/closing-the-gap">[Link]</a></li>
-      <li><i>Repurposing power markets: The path to sustainable and affordable energy for all.</i> International Finance Corporation, 2024. <a href="https://www.ifc.org/en/insights-reports/2024/repurposing-power-markets-for-sustainable-and-affordable-energy">[Link]</a></li>
-      <li><i>Compact monitoring report: Africa Advisory Group meeting, November 2023.</i> The World Bank Group, 2023. <a href="https://thedocs.worldbank.org/en/doc/d47e065b71247ba031d57c3d1da09faf-0630012024/original/CwA-Monitoring-Report-Nov-2023-Nov15-Final.pdf">[Link]</a></li>
+      <li><i>Repurposing Power Markets: The Path to Sustainable and Affordable Energy for All.</i> International Finance Corporation, 2024. <a href="https://www.ifc.org/en/insights-reports/2024/repurposing-power-markets-for-sustainable-and-affordable-energy">[Link]</a></li>
+      <li><i>Compact Monitoring Report: Africa Advisory Group Meeting, November 2023.</i> The World Bank Group, 2023. <a href="https://thedocs.worldbank.org/en/doc/d47e065b71247ba031d57c3d1da09faf-0630012024/original/CwA-Monitoring-Report-Nov-2023-Nov15-Final.pdf">[Link]</a></li>
     </ul>
 
     <h2>Book Chapters</h2>
     <ul>
-      <li>“A Review on Impact of Changing Climate on Sustainable Food Consumption,” in <i>Global Food Politics and Approaches to Sustainable Consumption</i>, 2020, 54–76. <a href="https://www.igi-global.com/gateway/chapter/235149">[Link]</a></li>
-      <li>“Climate Change Implication on Airborne Infections: Roadmap for Nigeria’s Health Sector Development,” in <i>Handbook of Climate Change Resilience</i>, 2018, 1–10. <a href="https://doi.org/10.1007/978-3-319-71025-9_131-1">[Link]</a></li>
+      <li>“<strong>A Review on Impact of Changing Climate on Sustainable Food Consumption</strong>,” in <i>Global Food Politics and Approaches to Sustainable Consumption</i>, 2020, 54–76. <a href="https://www.igi-global.com/gateway/chapter/235149">[Link]</a></li>
+      <li>“<strong>Climate Change Implication on Airborne Infections: Roadmap for Nigeria’s Health Sector Development</strong>,” in <i>Handbook of Climate Change Resilience</i>, 2018, 1–10. <a href="https://doi.org/10.1007/978-3-319-71025-9_131-1">[Link]</a></li>
     </ul>
 
     <h2>Blog</h2>
     <ul>
-      <li>“Better Data for Better Outcomes: New Tools and Analysis to Break Afghanistan’s Food Security Crisis” (with B. P. J. Andree and A. Braimoh), <i>World Bank Blogs</i>, 2025. <a href="https://blogs.worldbank.org/en/opendata/better-data-for-better-outcomes--new-tools-and-analysis-top-brea">[Link]</a></li>
-    </ul> 
+      <li>“<strong>Better Data for Better Outcomes: New Tools and Analysis to Break Afghanistan’s Food Security Crisis</strong>” (with B. P. J. Andree and A. Braimoh), <i>World Bank Blogs</i>, 2025. <a href="https://blogs.worldbank.org/en/opendata/better-data-for-better-outcomes--new-tools-and-analysis-top-brea">[Link]</a></li>
+    </ul>
   </div>
 
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
-
 </body>
 </html>
-
