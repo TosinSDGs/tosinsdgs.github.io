@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dissertation - Tosin Gbadegesin</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Navigation Styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+
+    nav a, .dropdown button {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 14px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    nav a:hover, .dropdown:hover button {
+      color: #0077cc;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Content Styling */
+    .dissertation-section {
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 0 25px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #003366;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    p {
+      color: #333;
+      text-align: justify;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <button>Research ▾</button>
+      <div class="dropdown-content">
+        <a href="jobmarket.html">Job Market</a>
+        <a href="publications.html">Publications</a>
+        <a href="ongoing.html">Ongoing Research</a>
+        <a href="dissertation.html">Dissertation</a>
+      </div>
+    </div>
+
+    <a href="cv.html">Bio/CV</a>
+    <a href="work.html">Work Experience</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <div class="dissertation-section">
+    <h1>Climate Change, Energy Demand, and Policy Impacts: Analyzing Residential and Building Energy Dynamics in the U.S.</h1>
+
+    <p>
+      Climate change has intensified global energy challenges by driving rapid growth in cooling demand, projected to more than triple worldwide by 2050. Rising temperatures, extreme heat events, and urbanization have made air conditioning one of the fastest-growing contributors to electricity use, straining energy systems and complicating decarbonization. While the challenge is acute in emerging economies, developed regions also face escalating burdens tied to high baseline demand, aging infrastructure, and emission reduction goals. In the United States, these pressures converge in the residential and building sectors, where climate-driven demand raises costs, stresses grids, and amplifies equity concerns. This dissertation examines household and building energy dynamics under these pressures, focusing on distributional impacts and policy effectiveness.
+    </p>
+
+    <p>
+      The first study examines how climate-driven cooling demand shapes household electricity consumption and expenditure using RECS 2015 and 2020 data. Results from unconditional quantile regression show that a 1% rise in cooling degree days increases electricity consumption by 0.759%, 0.603%, and 0.510% at the 25th, 50th, and 75th quantiles, with expenditures rising by 0.769%, 0.531%, and 0.40%. These effects fall disproportionately on lower-consuming households, whose burdens intensified between 2015 and 2020, with usage rising 36.5% at the 25th percentile versus 15.3% at the 75th. Heterogeneity emerges by region, income, housing type, cooling technology, and race, with unitary AC and minority households facing the steepest burdens. Robustness checks using 30-year average CDD confirm the results, reinforcing that climate-driven electricity burdens are persistent, inequitable, and shaped by both household and regional characteristics.
+    </p>
+
+    <p>
+      The second study extends this inquiry by applying causal machine learning methods—CATE, CQTE, and CSQTE—to RECS 2020 data. This framework quantifies heterogeneous and distributional treatment effects of cooling demand while projecting them onto key household characteristics such as income, race, housing type, and air conditioning system. Across the full sample, CATE learners yield consistent median effects of about 0.32, corresponding to a 38% increase in electricity consumption under above-average cooling conditions. Distributional results underscore vulnerability at the lower tail, with CSQTE effects of 0.29 (≈34%) at the 25th quantile versus 0.20 (≈22%) at the 75th. OLS projections show systematic heterogeneity: evaporative cooler households face increases exceeding 60%, middle-income households ($60k–$79k) peak at ≈51%, and minority households record burdens above 70%. Housing type amplifies disparities, with mobile and single-family homes more exposed than apartments. Robustness checks confirm stability across alternative climate definitions, reinforcing that cooling-driven electricity burdens are heterogeneous, persistent, and disproportionately concentrated among vulnerable subgroups.
+    </p>
+
+    <p>
+      The policy evaluation in Chapter 4 complements the household-level analysis by examining Washington, DC’s Building Energy Performance Standards (BEPS) introduced under the Clean Energy Omnibus Act of 2018. Using a two-way fixed effects framework with continuous treatment intensity and complementary event-study model, the analysis shows that buildings with greater pre-policy compliance shortfalls experience larger post-policy improvements. A 10-unit shortfall reduces Site EUI by 3.4 kWh/ft², Source EUI by 4.7 kWh/ft², raises Energy Star scores by 4.1 points, and cuts emissions by 3.8 million KgCO₂e. Weighted estimates confirm even larger emissions reductions of 5.7 million KgCO₂e. Event-study evidence supports parallel pre-trends and shows the largest improvements after 2021, when compliance became binding. Heterogeneity by ownership show private buildings driving efficiency gains, while public buildings achieve stronger emissions reductions. Robustness checks across alternative compliance-gap definitions confirm that BEPS consistently reduces energy use and emissions.
+    </p>
+
+    <p>
+      Taken together, the three studies provide new evidence on how climate change intensifies household energy burdens and how building performance standards mitigate emissions and efficiency shortfalls. By combining distributional econometrics, causal machine learning, and panel causal inference, the dissertation advances methodological and policy-relevant knowledge. It demonstrates that effective climate and energy policy must address not only average outcomes but also the heterogeneous vulnerabilities across households and buildings, ensuring equitable adaptation and sustainable urban transitions.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tosin Gbadegesin</p>
+  </footer>
+
+</body>
+</html>
 
