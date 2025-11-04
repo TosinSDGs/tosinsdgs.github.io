@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ongoing Research - Tosin Gbadegesin</title>
+  <link rel="stylesheet" href="style.css">
 
+  <style>
+    /* Dropdown Navigation Styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+
+    nav a, .dropdown button {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 14px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    nav a:hover, .dropdown:hover button {
+      color: #0077cc;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .abstract-section {
+      margin-bottom: 40px;
+    }
+
+    .abstract-section h2 {
+      color: #003366;
+      margin-top: 30px;
+    }
+
+    .abstract-section h3 {
+      font-weight: normal;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .abstract-section p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    
+    <div class="dropdown">
+      <button>Research ▾</button>
+      <div class="dropdown-content">
+        <a href="jobmarket.html">Job Market</a>
+        <a href="publications.html">Publications</a>
+        <a href="ongoing.html">Ongoing Research</a>
+      </div>
+    </div>
+    
+    <a href="cv.html">Bio/CV</a>
+    <a href="work.html">Work Experience</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <div class="jmp-section">
+    <h1>Ongoing Research</h1>
+
+    <div class="abstract-section">
+      <h2>Impact of Climate-Driven Cooling Demand on U.S. Household Electricity Consumption and Expenditure</h2>
+      <h3>Abstract</h3>
+      <p>
+        This study examines the effects of climate-induced cooling demand on household electricity consumption and expenditure in the United States using an unconditional quantile regression framework. Drawing on data from the 2015 and 2020 Residential Energy Consumption Survey, it estimates heterogeneous and nonlinear responses to cooling degree days across low-, median-, and high-consuming households. Results show that a 1% increase in cooling degree days raises electricity consumption by 1.04%, 0.88%, and 0.68% at the 25th, 50th, and 75th quantiles, respectively, while expenditure increases by 0.98%, 0.73%, and 0.54%. Higher impacts are observed among households in hot and mixed-dry zones, those with central air conditioning, and lower-income or minority households at lower quantiles. Using long-run climatic exposure confirms the robustness of these results. Robustness checks using long-term climatic exposure confirm persistent and unequal energy burdens, underscoring the need for adaptive efficiency and affordability policies to address climate-driven electricity vulnerability.
+      </p>
+    </div>
+
+    <div class="abstract-section">
+      <h2>Beyond Affordability: A Spatial Analysis of Renter Cost Burdens and Social Determinants in the United States</h2>
+      <h3>Abstract</h3>
+      <p>
+        This study investigates the spatial and socioeconomic determinants of renter cost burdens across U.S. census tracts. Focusing on the percentage of renters spending more than 30% of their income on housing, the study estimated a baseline OLS model followed by spatial econometric models – including Spatial Lag, Spatial Error, and Spatial Autocorrelation models to account for spatial dependencies. The results demonstrate that higher poverty and unemployment rates are robust predictors of increased rent burdens. Additionally, single-parent household prevalence significantly raises cost burdens, while educational attainment and mobility strongly influence affordability. Notably, limited mobility substantially reduces the rent burden, emphasizing the role of access in housing opportunities. The significance of spatial lag and error terms confirms that the rent burden is spatially structured, with spillover effects across neighboring communities. These findings highlight the need for coordinated regional policies that integrate economic, educational, and transportation strategies to effectively address renter housing challenges.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tosin Gbadegesin</p>
+  </footer>
+
+</body>
+</html>
