@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Me – Tosin Gbadegesin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Tosin Gbadegesin for research inquiries, collaborations, or speaking engagements." />
+  <link rel="canonical" href="https://tosinsdgs.github.io/contact.html" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Page container */
+    .contact-wrap {
+      max-width: 950px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    h1.contact-title {
+      text-align: center;
+      color: #2c3442;
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+    }
+
+    /* Form card */
+    .contact-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 26px;
+    }
+
+    /* Labels & inputs */
+    .form-row {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #252c35;
+    }
+    .req { color: #e21; }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #2f74ff;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      background: #fff;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #8aa0c2;
+    }
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      box-shadow: 0 0 0 4px rgba(47,116,255,0.15);
+      border-color: #2f74ff;
+    }
+
+    /* 2-col responsive row */
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 720px) {
+      .row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Buttons / status */
+    .btn-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .btn-primary {
+      background: #2f74ff;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(47,116,255,0.25);
+      background: #1f64f0;
+    }
+    .btn-primary:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .status {
+      font-size: 15px;
+    }
+    .status.ok { color: #0a8a4b; }
+    .status.err { color: #c51d1d; }
+
+    /* Subtle note + honeypot (hidden) */
+    .small-note {
+      font-size: 13px;
+      color: #667;
+      margin-top: -8px;
+      margin-bottom: 8px;
+    }
+    .hp-field { display: none !important; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <button>Research ▾</button>
+      <div class="dropdown-content">
+        <a href="jobmarket.html">Job Market</a>
+        <a href="ongoing.html">Ongoing Research</a>
+      </div>
+    </div>
+
+    <a href="dissertation.html">Dissertation</a>
+    <a href="cv.html">Bio/CV</a>
+    <a href="work.html">Work Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="contact-wrap">
+    <h1 class="contact-title">CONTACT ME</h1>
+
+    <div class="contact-card">
+      <form id="contact-form">
+        <!-- Honeypot to reduce spam -->
+        <input type="text" name="website" class="hp-field" autocomplete="off" tabindex="-1" aria-hidden="true" />
+
+        <div class="form-row">
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" name="from_name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="row-2">
+          <div class="form-row">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="from_email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number(+1-xxx-xxx-xxxx)" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Subject <span class="req">*</span></label>
+          <input type="text" id="subject" name="subject" placeholder="Enter your subject" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+          <div class="small-note">I typically reply within 1–2 business days.</div>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn-primary" id="sendBtn">Send Message</button>
+          <span id="formStatus" class="status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS (replace with your PUBLIC KEY)
+    (function() {
+      emailjs.init('YOUR_PUBLIC_KEY_HERE'); // e.g., 'tSxAbCDEFghI_jKLM'
+    })();
+
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('formStatus');
+    const sendBtn = document.getElementById('sendBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // honeypot check
+      if (form.website && form.website.value.trim() !== '') {
+        return; // likely a bot
+      }
+
+      // gather params for template
+      const params = {
+        from_name: document.getElementById('name').value.trim(),
+        from_email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        subject: document.getElementById('subject').value.trim(),
+        message: document.getElementById('message').value.trim(),
+
+        // OPTIONAL: if your EmailJS template uses a dynamic recipient field
+        // put both emails (comma-separated) here and reference {{to_email}} in the template "To" field.
+        to_email: 'tosingbade05@gmail.com, tosingbadegesin@bison.howard.edu'
+      };
+
+      // basic front-end validation
+      if (!params.from_name || !params.from_email || !params.subject || !params.message) {
+        statusEl.textContent = 'Please complete all required fields.';
+        statusEl.className = 'status err';
+        return;
+      }
+
+      statusEl.textContent = 'Sending...';
+      statusEl.className = 'status';
+      sendBtn.disabled = true;
+
+      try {
+        // Replace SERVICE_ID and TEMPLATE_ID with your EmailJS IDs
+        await emailjs.send('YOUR_SERVICE_ID_HERE', 'YOUR_TEMPLATE_ID_HERE', params);
+        statusEl.textContent = 'Message sent! Thank you.';
+        statusEl.className = 'status ok';
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'Sorry—something went wrong. Please try again or email me directly.';
+        statusEl.className = 'status err';
+      } finally {
+        sendBtn.disabled = false;
+      }
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Tosin Gbadegesin</p>
+  </footer>
+</body>
+</html>
