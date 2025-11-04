@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Dropdown Navigation Styles */
+    /* Navigation Styles */
     nav {
       display: flex;
       justify-content: center;
@@ -69,23 +69,26 @@
       line-height: 1.6;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       color: #003366;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 600;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     h2 {
       margin-top: 30px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     p, li {
       text-align: justify;
+      font-size: 1em;
+      color: #333;
     }
 
     ul {
@@ -118,7 +121,7 @@
     }
 
     .download-link {
-      margin-top: 20px;
+      margin-top: 25px;
       text-align: center;
       font-weight: bold;
     }
@@ -186,6 +189,9 @@
 
   <div class="jmp-section">
     <h1>Job Market Paper</h1>
+    <p style="text-align:center; font-weight:bold; font-size:1.1em;">
+      Building Energy Performance Standards: Impacts on Building Energy Efficiency and GHG Emissions in Washington, DC
+    </p>
 
     <h2>Summary</h2>
     <p>
@@ -201,29 +207,19 @@
       <li><strong>H2:</strong> Buildings with larger pre-policy performance shortfalls experience greater post-policy improvements.</li>
       <li><strong>H3:</strong> Heterogeneous effects exist across ownership categories, with public buildings responding faster to compliance incentives than private ones.</li>
     </ul>
-    <p>
-      The BEPS policy timeline anchored around 2018 enactment and 2021 mandatory compliance enables identification of both immediate and lagged responses across compliance cycles.
-    </p>
 
     <h2>Methodology</h2>
     <p>
-      The empirical framework applies a continuous-treatment two-way fixed effects (TWFE) model to estimate causal effects of BEPS on energy and emissions outcomes. The key regressor is the interaction between the compliance gap and a post-policy indicator, capturing how buildings with greater pre-policy inefficiency respond once the standard becomes binding. Event-study models assess the parallel trends assumption and trace the dynamic impacts of BEPS over time. Robustness checks include alternative gap definitions (property-type mean, percentile, and citywide) and inverse probability weighting (IPW) to address potential attrition bias in the unbalanced panel. Formally, the model estimates:
+      The empirical framework applies a continuous-treatment two-way fixed effects (TWFE) model to estimate causal effects of BEPS on energy and emissions outcomes. The key regressor is the interaction between the compliance gap and a post-policy indicator, capturing how buildings with greater pre-policy inefficiency respond once the standard becomes binding. Event-study models assess the parallel trends assumption and trace the dynamic impacts of BEPS over time. Robustness checks include alternative gap definitions (property-type mean, percentile, and citywide) and inverse probability weighting (IPW) to address potential attrition bias in the unbalanced panel.
     </p>
 
     <p style="text-align:center; font-style:italic;">
       Y<sub>it</sub> = β₀(Post<sub>t</sub> × Gap<sub>i,v</sub>) + α<sub>i</sub> + τ<sub>t</sub> + ε<sub>it</sub>
     </p>
 
-    <p>
-      where Y<sub>it</sub> denotes the outcome of interest for building i in year t (Site EUI, Source EUI, Energy Star Score, GHG emissions, or GHG emissions intensity). The variable Gap<sub>i,v</sub> measures the pre-policy shortfall relative to the BEPS threshold, and Post<sub>t</sub> is the policy indicator, building fixed effects (α<sub>i</sub>) absorb time-invariant heterogeneity while year fixed effects (τ<sub>t</sub>) account for common shocks across all buildings in a given year.
-    </p>
-
     <h2>Results</h2>
     <p>
       The findings demonstrate that BEPS produced measurable improvements in both energy efficiency and GHG emissions outcomes. Buildings with larger pre-policy compliance gaps achieved greater reductions in energy use intensity and emissions intensity once BEPS became binding. Specifically, each additional unit of pre-policy gap reduced site and source EUI by 0.34 and 0.47 kWh/ft², respectively, raised Energy Star scores by 0.41 points, and lowered GHG emissions by 0.38 million KgCO₂e and 0.70 KgCO₂e/ft². Weighted estimates confirm these effects, with total emissions reductions of up to 0.57 million KgCO₂e per unit gap.
-    </p>
-    <p>
-      Event-study results indicate that BEPS effects emerged gradually after its 2019 passage and became most pronounced after 2021, aligning with the first compliance cycle. Heterogeneity analysis shows that public buildings achieved larger emissions reductions, while private buildings realized stronger energy efficiency gains. Results remain robust under alternative specifications and long-run exposure (30-year average CDD), underscoring the persistence of policy impacts.
     </p>
 
     <h3>Table 4.1: BEPS Impacts Estimated with Property-Type Mean Compliance Gaps</h3>
@@ -245,12 +241,36 @@
         <td>-0.704*** (0.039)</td>
       </tr>
       <tr>
+        <td>Building FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Year FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Observations</td><td>12,347</td><td>12,347</td><td>10,980</td><td>12,347</td><td>12,347</td>
+      </tr>
+      <tr>
+        <td>R² (within)</td><td>0.108</td><td>0.245</td><td>0.063</td><td>0.356</td><td>0.340</td>
+      </tr>
+      <tr>
         <td><strong>B: IPW-Weighted Estimates</strong></td>
         <td>-0.323*** (0.038)</td>
         <td>-0.459*** (0.063)</td>
         <td>0.415*** (0.040)</td>
         <td>-0.566*** (0.063)</td>
         <td>-0.728*** (0.035)</td>
+      </tr>
+      <tr>
+        <td>Building FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Year FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Observations</td><td>11,654</td><td>11,654</td><td>10,980</td><td>11,654</td><td>11,654</td>
+      </tr>
+      <tr>
+        <td>R² (within)</td><td>0.097</td><td>0.236</td><td>0.063</td><td>0.130</td><td>-2.427</td>
       </tr>
     </table>
 
@@ -261,7 +281,6 @@
     <!-- Graph Placeholder -->
     <div class="graph-placeholder">
       <p><strong>Figure 1:</strong> Event-Study Plots of BEPS Impacts</p>
-      <!-- Replace the image source below with your actual figure -->
       <img src="figure1_eventstudy.png" alt="Event Study Plot Placeholder">
       <p>Note: Insert event-study graph showing dynamic BEPS treatment effects over time.</p>
     </div>
@@ -272,19 +291,18 @@
     </p>
 
     <h2>References</h2>
-    <ul>
-      <li>Andrews, Abigail, and Rishee Jain. 2023. “Evaluating Building Decarbonization Potential in U.S. Cities under Emissions-Based Building Performance Standards and Load Flexibility Requirements.” <i>Journal of Building Engineering</i>, 76: 107375.</li>
-      <li>Webb, Amanda, and Colby McConnell. 2023. "Evaluating the feasibility of achieving building performance standards targets." <i>Energy and Buildings</i>, 288: 112989.</li>
-      <li>Palmer, Karen, and Margaret Walls. 2017. "Using information to close the energy efficiency gap: a review of benchmarking and disclosure ordinances." <i>Energy Efficiency</i>, 10(3): 673-691.</li>
-      <li>District of Columbia Council. 2008. <i>Clean and Affordable Energy Act of 2008.</i> Washington, DC: DC Council. <a href="https://code.dccouncil.gov/us/dc/council/laws/17-250">[Link]</a></li>
-      <li>District of Columbia Council. 2018. <i>Clean Energy DC Omnibus Amendment Act of 2018.</i> Washington, DC: DC Council. <a href="https://code.dccouncil.gov/us/dc/council/laws/22-257">[Link]</a></li>
-      <li>District Department of Energy & Environment (DOEE). 2019. <i>Building Energy Performance Standards (BEPS) Program Guidebook.</i> Washington, DC: DOEE.</li>
-      <li>District of Columbia Department of Energy & Environment (DOEE). 2021. <i>Building Energy Performance Standards (BEPS) Compliance Guidebook.</i> Washington, DC: Government of the District of Columbia. <a href="https://doee.dc.gov/service/building-energy-performance-standards-beps">[Link]</a></li>
-    </ul>
+    <p>
+      Andrews, Abigail, and Rishee Jain. 2023. “Evaluating Building Decarbonization Potential in U.S. Cities under Emissions-Based Building Performance Standards and Load Flexibility Requirements.” <i>Journal of Building Engineering</i>, 76: 107375.<br><br>
+      Webb, Amanda, and Colby McConnell. 2023. "Evaluating the feasibility of achieving building performance standards targets." <i>Energy and Buildings</i>, 288: 112989.<br><br>
+      Palmer, Karen, and Margaret Walls. 2017. "Using information to close the energy efficiency gap: a review of benchmarking and disclosure ordinances." <i>Energy Efficiency</i>, 10(3): 673–691.<br><br>
+      District of Columbia Council. 2008. <i>Clean and Affordable Energy Act of 2008.</i> Washington, DC: DC Council. <a href="https://code.dccouncil.gov/us/dc/council/laws/17-250">[Link]</a><br><br>
+      District of Columbia Council. 2018. <i>Clean Energy DC Omnibus Amendment Act of 2018.</i> Washington, DC: DC Council. <a href="https://code.dccouncil.gov/us/dc/council/laws/22-257">[Link]</a><br><br>
+      District Department of Energy & Environment (DOEE). 2019. <i>Building Energy Performance Standards (BEPS) Program Guidebook.</i> Washington, DC: DOEE.<br><br>
+      District of Columbia Department of Energy & Environment (DOEE). 2021. <i>Building Energy Performance Standards (BEPS) Compliance Guidebook.</i> Washington, DC: Government of the District of Columbia. <a href="https://doee.dc.gov/service/building-energy-performance-standards-beps">[Link]</a>
+    </p>
 
     <div class="download-link">
-      📄 <a href="TosinG_Job Market Paper.pdf" target="_blank" rel="noopener">View Full Paper (PDF)</a> |
-      <a href="TosinG_Job Market Paper.pdf" download>Download</a>
+      📄 <a href="TosinG_Job Market Paper2.pdf" target="_blank" rel="noopener">View Full Paper (PDF)</a>
     </div>
 
   </div>
@@ -295,4 +313,3 @@
 
 </body>
 </html>
-
