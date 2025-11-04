@@ -6,13 +6,14 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Dropdown Navigation Styles */
+    /* Navigation and Dropdown Styles (aligned with index.html) */
     nav {
       display: flex;
       justify-content: center;
       gap: 15px;
       background-color: #f5f5f5;
       padding: 10px;
+      flex-wrap: wrap;
     }
 
     nav a, .dropdown button {
@@ -61,25 +62,67 @@
       display: block;
     }
 
-    .abstract-section {
+    /* Page Layout and Typography */
+    .jmp-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
       margin-bottom: 40px;
+    }
+
+    .abstract-section {
+      margin-bottom: 50px;
+      background-color: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      padding: 25px 30px;
+      transition: 0.3s ease;
+    }
+
+    .abstract-section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     }
 
     .abstract-section h2 {
       color: #003366;
-      margin-top: 30px;
+      font-size: 1.3em;
+      margin-bottom: 10px;
     }
 
     .abstract-section h3 {
-      font-weight: normal;
+      font-weight: bold;
       font-style: italic;
-      color: #333;
-      margin-bottom: 10px;
+      color: #555;
+      margin-bottom: 8px;
     }
 
     .abstract-section p {
       text-align: justify;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .jmp-section {
+        padding: 0 15px;
+      }
+      .abstract-section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -93,14 +136,16 @@
       <button>Research ▾</button>
       <div class="dropdown-content">
         <a href="jobmarket.html">Job Market</a>
-        <a href="publications.html">Publications</a>
         <a href="ongoing.html">Ongoing Research</a>
+        <a href="publications.html">Publications</a>
       </div>
     </div>
-    
+
+    <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="jmp-section">
@@ -110,7 +155,7 @@
       <h2>Impact of Climate-Driven Cooling Demand on U.S. Household Electricity Consumption and Expenditure</h2>
       <h3>Abstract</h3>
       <p>
-        This study examines the effects of climate-induced cooling demand on household electricity consumption and expenditure in the United States using an unconditional quantile regression framework. Drawing on data from the 2015 and 2020 Residential Energy Consumption Survey, it estimates heterogeneous and nonlinear responses to cooling degree days across low-, median-, and high-consuming households. Results show that a 1% increase in cooling degree days raises electricity consumption by 1.04%, 0.88%, and 0.68% at the 25th, 50th, and 75th quantiles, respectively, while expenditure increases by 0.98%, 0.73%, and 0.54%. Higher impacts are observed among households in hot and mixed-dry zones, those with central air conditioning, and lower-income or minority households at lower quantiles. Using long-run climatic exposure confirms the robustness of these results. Robustness checks using long-term climatic exposure confirm persistent and unequal energy burdens, underscoring the need for adaptive efficiency and affordability policies to address climate-driven electricity vulnerability.
+        This study examines the effects of climate-induced cooling demand on household electricity consumption and expenditure in the United States using an unconditional quantile regression framework. Drawing on data from the 2015 and 2020 Residential Energy Consumption Survey, it estimates heterogeneous and nonlinear responses to cooling degree days across low-, median-, and high-consuming households. Results show that a 1% increase in cooling degree days raises electricity consumption by 1.04%, 0.88%, and 0.68% at the 25th, 50th, and 75th quantiles, respectively, while expenditure increases by 0.98%, 0.73%, and 0.54%. Higher impacts are observed among households in hot and mixed-dry zones, those with central air conditioning, and lower-income or minority households at lower quantiles. Using long-run climatic exposure confirms the robustness of these results. These findings underscore the need for adaptive efficiency and affordability policies to address climate-driven electricity vulnerability.
       </p>
     </div>
 
@@ -118,7 +163,7 @@
       <h2>Beyond Affordability: A Spatial Analysis of Renter Cost Burdens and Social Determinants in the United States</h2>
       <h3>Abstract</h3>
       <p>
-        This study investigates the spatial and socioeconomic determinants of renter cost burdens across U.S. census tracts. Focusing on the percentage of renters spending more than 30% of their income on housing, the study estimated a baseline OLS model followed by spatial econometric models – including Spatial Lag, Spatial Error, and Spatial Autocorrelation models to account for spatial dependencies. The results demonstrate that higher poverty and unemployment rates are robust predictors of increased rent burdens. Additionally, single-parent household prevalence significantly raises cost burdens, while educational attainment and mobility strongly influence affordability. Notably, limited mobility substantially reduces the rent burden, emphasizing the role of access in housing opportunities. The significance of spatial lag and error terms confirms that the rent burden is spatially structured, with spillover effects across neighboring communities. These findings highlight the need for coordinated regional policies that integrate economic, educational, and transportation strategies to effectively address renter housing challenges.
+        This study investigates the spatial and socioeconomic determinants of renter cost burdens across U.S. census tracts. Focusing on the percentage of renters spending more than 30% of their income on housing, the study estimated a baseline OLS model followed by spatial econometric models – including Spatial Lag, Spatial Error, and Spatial Autocorrelation models to account for spatial dependencies. The results demonstrate that higher poverty and unemployment rates are robust predictors of increased rent burdens. Additionally, single-parent household prevalence significantly raises cost burdens, while educational attainment and mobility strongly influence affordability. Notably, limited mobility substantially reduces rent burdens, emphasizing the role of access in housing opportunities. The significance of spatial lag and error terms confirms that rent burden is spatially structured, with spillover effects across neighboring communities. These findings highlight the need for coordinated regional policies that integrate economic, educational, and transportation strategies to effectively address renter housing challenges.
       </p>
     </div>
 
