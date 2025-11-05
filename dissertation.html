@@ -12,21 +12,26 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      align-items: center;
+      gap: 35px;
       background-color: #f5f5f5;
-      padding: 10px;
+      padding: 15px 0;
       flex-wrap: wrap;
+      font-weight: bold;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     nav a, .dropdown button {
       text-decoration: none;
       color: #333;
-      padding: 8px 14px;
-      font-weight: bold;
+      font-size: 1.05em;
+      font-weight: 700;
       background: none;
       border: none;
       cursor: pointer;
-      font-size: 1em;
+      padding: 6px 10px;
+      vertical-align: middle;
+      font-family: inherit;
     }
 
     nav a:hover, .dropdown:hover button {
@@ -35,18 +40,28 @@
 
     .dropdown {
       position: relative;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .dropdown button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #fff;
-      min-width: 200px;
+      min-width: 210px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       z-index: 1;
       border-radius: 6px;
       text-align: left;
+      top: 40px;
+      left: 0;
     }
 
     .dropdown-content a {
@@ -54,10 +69,13 @@
       padding: 10px 15px;
       display: block;
       text-decoration: none;
+      font-weight: 500;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     .dropdown-content a:hover {
       background-color: #f0f0f0;
+      color: #0077cc;
     }
 
     .dropdown:hover .dropdown-content {
@@ -70,12 +88,12 @@
       margin: 50px auto;
       padding: 0 25px;
       line-height: 1.7;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     h1 {
       text-align: center;
       color: #003366;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 700;
       font-size: 1.9em;
       margin-bottom: 30px;
@@ -114,6 +132,11 @@
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
       color: #333;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     @media (max-width: 768px) {
@@ -126,6 +149,7 @@
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
 
@@ -145,6 +169,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Dissertation Content -->
   <div class="dissertation-section">
     <h1>Climate Change, Energy Demand, and Policy Impacts: Analyzing Residential and Building Energy Dynamics in the U.S.</h1>
 
@@ -169,6 +194,7 @@
     </p>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
