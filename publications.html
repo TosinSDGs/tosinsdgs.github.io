@@ -6,25 +6,30 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Navigation */
+    /* Navigation Bar */
     nav {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      align-items: center;
+      gap: 35px;
       background-color: #f5f5f5;
-      padding: 10px;
+      padding: 15px 0;
       flex-wrap: wrap;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
     }
 
     nav a, .dropdown button {
       text-decoration: none;
       color: #333;
-      padding: 8px 14px;
-      font-weight: bold;
+      font-size: 1.05em;
+      font-weight: 700;
       background: none;
       border: none;
       cursor: pointer;
-      font-size: 1em;
+      padding: 6px 10px;
+      vertical-align: middle;
+      font-family: inherit;
     }
 
     nav a:hover, .dropdown:hover button {
@@ -33,18 +38,29 @@
 
     .dropdown {
       position: relative;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dropdown button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #fff;
-      min-width: 200px;
+      min-width: 210px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       z-index: 1;
       border-radius: 6px;
       text-align: left;
+      top: 40px;
+      left: 0;
     }
 
     .dropdown-content a {
@@ -52,10 +68,13 @@
       padding: 10px 15px;
       display: block;
       text-decoration: none;
+      font-weight: 500;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     .dropdown-content a:hover {
       background-color: #f0f0f0;
+      color: #0077cc;
     }
 
     .dropdown:hover .dropdown-content {
@@ -63,31 +82,40 @@
     }
 
     /* Page Layout */
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
     .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
     }
 
     h1 {
       color: #003366;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-weight: 700;
     }
 
     h2 {
       color: #003366;
-      margin-top: 35px;
-      margin-bottom: 10px;
+      margin-top: 40px;
+      margin-bottom: 12px;
       border-bottom: 2px solid #e5e5e5;
       padding-bottom: 5px;
+      font-weight: 600;
     }
 
     ul {
       list-style-type: disc;
       margin-left: 25px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     li {
@@ -105,12 +133,25 @@
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
-      text-align: center;
-      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
       padding: 20px;
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
+      text-align: center;
+      font-size: 14px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    footer p {
+      margin: 0;
+      color: #333;
+      font-weight: 500;
     }
 
     @media (max-width: 768px) {
@@ -148,7 +189,7 @@
     <h1>Publications</h1>
 
     <ul>
-      <li>“<strong>Climate Change and Energy Dynamics: Evidence from BRICS and G7 Countries</strong>,” <i>Energy & Environment</i>, 2024, 0(0). <a href="https://journals.sagepub.com/doi/10.1177/0958305X241302692">[Link]</a></li>
+      <li>“<strong>Climate Change and Energy Dynamics: Evidence from BRICS and G7 Countries</strong>,” <i>Energy & Environment</i>, 2024. <a href="https://journals.sagepub.com/doi/10.1177/0958305X241302692">[Link]</a></li>
       <li>“<strong>Evaluating the Economic Impact of the G20 Compact Initiative: Evidence from Causal Inference Using Advanced Machine Learning</strong>” (with N. Yameogo), <i>Journal of Sustainable Development</i>, 2024, 17(5), 56–76. <a href="https://ccsenet.org/journal/index.php/jsd/article/view/0/50548">[Link]</a></li>
       <li>“<strong>Defense Expenditure and National Well-Being: Evidence from the G7 Countries</strong>,” <i>Defence and Peace Economics</i>, 2024, 1–12. <a href="https://www.tandfonline.com/doi/full/10.1080/10242694.2024.2413232">[Link]</a></li>
       <li>“<strong>Effectiveness of Collective Action in Reducing Transaction Cost for Smallholder Paddy Farmers in Tanzania</strong>” (with L. Popoola), <i>African Journal of Economic and Sustainable Development</i>, 2020, 7(4), 391–404. <a href="https://www.inderscienceonline.com/doi/abs/10.1504/AJESD.2020.106828">[Link]</a></li>
@@ -182,8 +223,10 @@
     </ul>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
+
 </body>
 </html>
