@@ -19,6 +19,8 @@
       flex-wrap: wrap;
       font-weight: bold;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      position: relative;
+      z-index: 10;
     }
 
     nav a, .dropdown button {
@@ -34,22 +36,13 @@
       font-family: inherit;
     }
 
-    nav a:hover, .dropdown:hover button {
+    nav a:hover, .dropdown:hover button, .dropdown button:focus {
       color: #0077cc;
     }
 
     .dropdown {
       position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .dropdown button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
+      display: inline-block;
     }
 
     .dropdown-content {
@@ -58,11 +51,11 @@
       background-color: #fff;
       min-width: 210px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1;
       border-radius: 6px;
       text-align: left;
-      top: 40px;
+      top: 100%;
       left: 0;
+      z-index: 999;
     }
 
     .dropdown-content a {
@@ -79,7 +72,9 @@
       color: #0077cc;
     }
 
-    .dropdown:hover .dropdown-content {
+    /* Keep dropdown open while hovering inside */
+    .dropdown:hover .dropdown-content,
+    .dropdown-content:hover {
       display: block;
     }
 
@@ -145,6 +140,11 @@
         padding: 0 15px;
       }
     }
+
+    /* JS toggle support */
+    .show {
+      display: block !important;
+    }
   </style>
 </head>
 
@@ -155,8 +155,8 @@
     <a href="index.html">Home</a>
 
     <div class="dropdown">
-      <button>Research ▾</button>
-      <div class="dropdown-content">
+      <button onclick="toggleDropdown()">Research ▾</button>
+      <div class="dropdown-content" id="researchDropdown">
         <a href="jobmarket.html">Job Market</a>
         <a href="ongoing.html">Ongoing Research</a>
         <a href="publications.html">Publications</a>
@@ -199,6 +199,25 @@
   <footer>
     <p>&copy; 2025 Tosin Gbadegesin</p>
   </footer>
+
+  <!-- JS fix for dropdown on mobile/click -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("researchDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown button')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    };
+  </script>
 
 </body>
 </html>
