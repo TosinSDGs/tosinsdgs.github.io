@@ -23,23 +23,8 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tosin Gbadegesin",
-    "jobTitle": "Ph.D. Candidate in Economics",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Howard University"
-    },
-    "email": "mailto:tosingbadegesin@bison.howard.edu",
-    "image": "https://tosinsdgs.github.io/tosin.jpg",
-    "url": "https://tosinsdgs.github.io/",
-    "sameAs": ["https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en"]
-  }
-  </script>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     /* Navigation Bar */
@@ -154,6 +139,29 @@
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .email-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+
+    .email-line i {
+      color: #0077cc;
+      font-size: 1em;
+    }
+
+    .email-line a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .email-line a:hover {
+      color: #0077cc;
+    }
+
     .intro-text p {
       color: #333;
       line-height: 1.6;
@@ -205,6 +213,9 @@
       .left-column {
         margin-bottom: 25px;
       }
+      .email-line {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -214,7 +225,6 @@
   <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
-
     <div class="dropdown">
       <button onclick="toggleDropdown()">Research ▾</button>
       <div class="dropdown-content" id="researchDropdown">
@@ -223,7 +233,6 @@
         <a href="publications.html">Publications</a>
       </div>
     </div>
-
     <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
     <a href="work.html">Work Experience</a>
@@ -247,10 +256,11 @@
 
       <img src="tosin.jpg" alt="Portrait of Tosin Gbadegesin" class="photo-inline">
 
-      <p><strong>Email:</strong>
+      <div class="email-line">
+        <i class="fas fa-envelope"></i>
         <a href="mailto:tosingbadegesin@bison.howard.edu">tosingbadegesin@bison.howard.edu</a> | 
         <a href="mailto:tosingbade05@gmail.com">tosingbade05@gmail.com</a>
-      </p>
+      </div>
     </div>
 
     <!-- Right Column -->
