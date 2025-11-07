@@ -23,9 +23,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
     /* Navigation Bar */
     nav {
@@ -91,7 +88,6 @@
       color: #0077cc;
     }
 
-    /* Keep dropdown open while hovering inside */
     .dropdown:hover .dropdown-content,
     .dropdown-content:hover {
       display: block;
@@ -139,6 +135,7 @@
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
 
+    /* Email line */
     .email-line {
       display: flex;
       align-items: center;
@@ -146,11 +143,14 @@
       gap: 10px;
       margin-top: 10px;
       font-size: 0.95em;
+      flex-wrap: wrap;
     }
 
-    .email-line i {
-      color: #0077cc;
-      font-size: 1em;
+    .email-line svg {
+      width: 18px;
+      height: 18px;
+      fill: #0077cc;
+      vertical-align: middle;
     }
 
     .email-line a {
@@ -257,7 +257,13 @@
       <img src="tosin.jpg" alt="Portrait of Tosin Gbadegesin" class="photo-inline">
 
       <div class="email-line">
-        <i class="fas fa-envelope"></i>
+        <!-- Inline SVG for email icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 
+                   2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm18 0H4v.01L12 
+                   11l8-6.99V4zm0 2.236l-7.555 6.604a1 1 0 0 
+                   1-1.29 0L4 6.236V20h16V6.236z"/>
+        </svg>
         <a href="mailto:tosingbadegesin@bison.howard.edu">tosingbadegesin@bison.howard.edu</a> | 
         <a href="mailto:tosingbade05@gmail.com">tosingbade05@gmail.com</a>
       </div>
