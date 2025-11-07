@@ -94,12 +94,23 @@
     }
 
     .page-title {
-      font-size: 30px;
+      font-size: 32px;
       color: #003366;
       font-weight: 700;
       margin-bottom: 40px;
-      text-decoration: none;
-      border: none;
+      text-decoration: none !important;
+      border: none !important;
+      display: inline-block;
+      position: relative;
+    }
+
+    .page-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: #003366;
+      margin: 8px auto 0;
     }
 
     .project-card {
