@@ -242,17 +242,17 @@
 
     <h2>Summary</h2>
     <p>
-      The accelerating urgency of climate change has prompted cities to implement performance-based energy policies aimed at reducing emissions from the built environment. This study evaluates the ex post causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a first-of-its-kind U.S. policy mandating energy efficiency improvements in underperforming buildings. Using panel data from 2012–2023, the study investigates whether BEPS has generated measurable reductions in building energy use intensity (EUI) and greenhouse gas (GHG) emissions and how impacts vary across building ownership types. The findings reveal that BEPS led to significant improvements in energy efficiency and emissions performance, particularly among buildings with the largest pre-policy compliance gaps.
+      The accelerating urgency of climate change has led cities to adopt performance-based energy policies aimed at reducing emissions from the built environment. This study evaluates the ex post causal impacts of Washington, DC’s Building Energy Performance Standards (BEPS), a U.S. policy that mandates performance improvements among relatively underperforming buildings. Using building-level panel data from 2013–2023, the analysis examines whether BEPS generated measurable reductions in energy use intensity (EUI) and greenhouse gas (GHG) emissions and how responses scale with buildings’ relative pre-policy performance. The results show that BEPS induced substantial improvements in energy efficiency and emissions outcomes, with larger effects among buildings that initially performed worse relative to comparable peers.
     </p>
 
     <h2>Data and Hypotheses</h2>
     <p>
-      The analysis draws on building-level panel data from the District of Columbia Department of Energy and Environment (DOEE) Open Data portal covering 2012–2023. The dataset includes annual observations on site and source EUI, Energy Star scores, total and intensity-based GHG emissions, property type, size, and ownership. To operationalize policy exposure, a continuous treatment variable—the “compliance gap”—is constructed as the difference between each building’s pre-policy baseline and the applicable BEPS threshold. Three hypotheses guide the analysis:
+      The analysis draws on annual building-level data from the District of Columbia Department of Energy and Environment (DOEE) Open Data portal spanning 2013–2023. The dataset includes weather-normalized site and source EUI, Energy Star scores, total and intensity-based GHG emissions, building size, property type, and ownership status. Policy exposure is captured through a continuous “compliance gap” measuring how a building’s pre-policy baseline performance compares to peer benchmarks defined by property-type averages, property-type efficiency percentiles, and citywide norms. The analysis tests three hypotheses:
     </p>
     <ul>
-      <li><strong>H1:</strong> BEPS adoption leads to significant reductions in building-level energy use and emissions.</li>
+      <li><strong>H1:</strong> BEPS implementation leads to significant reductions in building energy use and GHG emissions.</li>
       <li><strong>H2:</strong> Buildings with larger pre-policy performance shortfalls experience greater post-policy improvements.</li>
-      <li><strong>H3:</strong> Heterogeneous effects exist across ownership categories, with public buildings responding faster to compliance incentives than private ones.</li>
+      <li><strong>H3:</strong> BEPS effects do not vary by building ownership type, with public and private buildings potentially responding similarly to the policy.</li>
     </ul>
 
     <h2>Methodology</h2>
@@ -266,7 +266,7 @@
 
     <h2>Results</h2>
     <p>
-      The findings demonstrate that BEPS produced measurable improvements in both energy efficiency and GHG emissions outcomes. Buildings with larger pre-policy compliance gaps achieved greater reductions in energy use intensity and emissions intensity once BEPS became binding. Specifically, each additional unit of pre-policy gap reduced site and source EUI by 0.34 and 0.47 kWh/ft², respectively, raised Energy Star scores by 0.41 points, and lowered GHG emissions by 0.38 million KgCO₂e and 0.70 KgCO₂e/ft². Weighted estimates confirm these effects, with total emissions reductions of up to 0.57 million KgCO₂e per unit gap.
+      The empirical strategy adopts a modern continuous DiD framework with building and year fixed effects. Treatment intensity is defined by the interaction of the compliance gap with a post-policy indicator that becomes binding in 2021. Event-study models assess the parallel trends in the intensity assumption and trace the dynamic evolution of BEPS impacts over time. Robustness checks include alternative gap definitions, inverse probability weighting (IPW) to correct for non-random attrition, and specifications accounting for overlapping federal and local energy policies implemented during the BEPS period.
     </p>
 
     <h3>Table 4.1: BEPS Impacts Estimated with Property-Type Mean Compliance Gaps</h3>
@@ -320,7 +320,7 @@
 
     <h2>Contribution</h2>
     <p>
-      This study contributes to the literature on energy policy evaluation, urban decarbonization, and building energy economics by providing one of the first ex post causal analyses of BEPS. It applies a continuous-treatment TWFE framework, offering a scalable approach for evaluating policies with varying intensity. Disaggregating results by ownership type reveals public buildings achieving greater emissions reductions, while private buildings show sharper energy efficiency gains — highlighting BEPS as a model for equitable and performance-based climate policy.
+      This study contributes to the literature on urban energy policy and building decarbonization by providing one of the first causal, ex post evaluations of BEPS using building-level data. By framing BEPS as a performance-based regulation with heterogeneous treatment intensity, the analysis demonstrates how mandatory standards can generate scalable efficiency and emissions gains without relying on a treated–control comparison. The results show that BEPS responses are primarily driven by baseline underperformance rather than building ownership status, underscoring the role of enforceable, peer-based benchmarks in accelerating building-sector decarbonization.
     </p>
 
     <div class="download-link">
