@@ -270,48 +270,143 @@
     </p>
 
     <h3>Table 4.1: BEPS Impacts Estimated with Property-Type Mean Compliance Gaps</h3>
-    <table>
-      <tr>
-        <th></th>
-        <th>Site EUI<br>(kWh/ft²)</th>
-        <th>Source EUI<br>(kWh/ft²)</th>
-        <th>Energy Star Score</th>
-        <th>GHG Emissions<br>(KgCO₂e)</th>
-        <th>GHG Intensity<br>(KgCO₂e/ft²)</th>
-      </tr>
-      <tr>
-        <td><strong>A: Unweighted Estimates</strong></td>
-        <td>-0.343*** (0.036)</td>
-        <td>-0.472*** (0.059)</td>
-        <td>0.412*** (0.039)</td>
-        <td>-0.375*** (0.084)</td>
-        <td>-0.704*** (0.039)</td>
-      </tr>
-      <tr>
-        <td>Building FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-      </tr>
-      <tr>
-        <td>Year FE</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
-      </tr>
-      <tr>
-        <td>Observations</td><td>12,347</td><td>12,347</td><td>10,980</td><td>12,347</td><td>12,347</td>
-      </tr>
-      <tr>
-        <td>R² (within)</td><td>0.108</td><td>0.245</td><td>0.063</td><td>0.356</td><td>0.340</td>
-      </tr>
-      <tr>
-        <td><strong>B: IPW-Weighted Estimates</strong></td>
-        <td>-0.323*** (0.038)</td>
-        <td>-0.459*** (0.063)</td>
-        <td>0.415*** (0.040)</td>
-        <td>-0.566*** (0.063)</td>
-        <td>-0.728*** (0.035)</td>
-      </tr>
-    </table>
+    <table style="width:100%; border-collapse:collapse;">
+  <tr>
+    <th></th>
+    <th>Site EUI<br>(kBtu/ft²)</th>
+    <th>Source EUI<br>(kBtu/ft²)</th>
+    <th>Energy Star<br>Score</th>
+    <th>GHG Emissions<br>(MTCO₂e)</th>
+    <th>GHG Intensity<br>(KgCO₂e/ft²)</th>
+  </tr>
 
-    <p style="font-size: 0.9em; text-align:center;">
-      Standard errors in parentheses. Significance: *** p < 0.01, ** p < 0.05, * p < 0.10.
-    </p>
+  <!-- Panel A -->
+  <tr>
+    <td colspan="6" style="text-align:center; font-weight:bold; border-top:2px solid #000;">
+      A: Base Model Estimates
+    </td>
+  </tr>
+  <tr>
+    <td>Post × Compliance Gap</td>
+    <td>-0.33*** (0.04)</td>
+    <td>-0.45*** (0.06)</td>
+    <td>0.41*** (0.03)</td>
+    <td>-0.35*** (0.07)</td>
+    <td>-0.65*** (0.04)</td>
+  </tr>
+  <tr>
+    <td>Observations</td>
+    <td>11,937</td>
+    <td>11,937</td>
+    <td>10,686</td>
+    <td>11,937</td>
+    <td>11,937</td>
+  </tr>
+  <tr>
+    <td>Entities</td>
+    <td>1,997</td>
+    <td>1,997</td>
+    <td>1,810</td>
+    <td>1,997</td>
+    <td>1,997</td>
+  </tr>
+  <tr>
+    <td>R² (within)</td>
+    <td>0.106</td>
+    <td>0.21</td>
+    <td>0.054</td>
+    <td>0.21</td>
+    <td>0.34</td>
+  </tr>
+
+  <!-- Panel B -->
+  <tr>
+    <td colspan="6" style="text-align:center; font-weight:bold; border-top:2px solid #000;">
+      B: Estimates with overlapping policies
+    </td>
+  </tr>
+  <tr>
+    <td>Post × Compliance Gap</td>
+    <td>-0.33*** (0.04)</td>
+    <td>-0.45*** (0.06)</td>
+    <td>0.41*** (0.04)</td>
+    <td>-0.35*** (0.08)</td>
+    <td>-0.65*** (0.04)</td>
+  </tr>
+  <tr>
+    <td>Observations</td>
+    <td>11,937</td>
+    <td>11,937</td>
+    <td>10,686</td>
+    <td>11,937</td>
+    <td>11,937</td>
+  </tr>
+  <tr>
+    <td>Entities</td>
+    <td>1,997</td>
+    <td>1,997</td>
+    <td>1,810</td>
+    <td>1,997</td>
+    <td>1,997</td>
+  </tr>
+  <tr>
+    <td>R² (within)</td>
+    <td>0.11</td>
+    <td>0.22</td>
+    <td>0.05</td>
+    <td>0.22</td>
+    <td>0.34</td>
+  </tr>
+
+  <!-- Panel C -->
+  <tr>
+    <td colspan="6" style="text-align:center; font-weight:bold; border-top:2px solid #000;">
+      C: IPW-Weighted Estimates
+    </td>
+  </tr>
+  <tr>
+    <td>Post × Compliance Gap</td>
+    <td>-0.32*** (0.04)</td>
+    <td>-0.44*** (0.06)</td>
+    <td>0.42*** (0.04)</td>
+    <td>-0.54*** (0.06)</td>
+    <td>-0.76*** (0.02)</td>
+  </tr>
+  <tr>
+    <td>Observations</td>
+    <td>11,281</td>
+    <td>11,281</td>
+    <td>10,686</td>
+    <td>11,281</td>
+    <td>11,281</td>
+  </tr>
+  <tr>
+    <td>Entities</td>
+    <td>1,810</td>
+    <td>1,810</td>
+    <td>1,810</td>
+    <td>1,810</td>
+    <td>1,810</td>
+  </tr>
+  <tr>
+    <td>R² (within)</td>
+    <td>0.10</td>
+    <td>0.22</td>
+    <td>0.05</td>
+    <td>0.21</td>
+    <td>0.24</td>
+  </tr>
+</table>
+
+<p style="font-size:0.9em; text-align:center; margin-top:10px;">
+  This table reports continuous DID estimates of the impact of BEPS using the mean compliance gap.
+  Panel A reports unweighted estimates. Panels B and C report inverse probability weighted (IPW)
+  estimates that correct for non-random building attrition and control for overlapping federal (2021)
+  and local (2020) energy subsidy programs. All models include building and year fixed effects.
+  Standard errors are clustered at the building level.
+  Significance levels: *** p &lt; 0.01, ** p &lt; 0.05, * p &lt; 0.10.
+</p>
+
 
     <div class="graph-placeholder">
       <p><strong>Figure 1:</strong> Event-Study Plots of BEPS Impacts</p>
