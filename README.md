@@ -15,9 +15,9 @@ I am a Ph.D. Candidate in Economics at **Howard University**, specializing in **
 My dissertation, *"Climate Change, Energy Demand, and Policy Impacts: Analyzing Residential and Building Energy Dynamics in the U.S.,"* examines examines how climate change–induced cooling demand affects household and building energy use in the United States, focusing on the distributional impacts and policy effectiveness of responses to rising electricity demand and decarbonization pressures.  
 
 My **2025–2026 Job Market Paper**, titled  
-*“Heterogeneous Effects of Cooling Demand on Household Electricity Consumption using Causal ML Models,”*  
-quantifies the causal and distributional effects of climate-driven cooling demand on household electricity use in the United States using 2020 RECS microdata and advanced causal machine learning estimators (CATE, CQTE, CSQTE).  
-This research contributes to energy policy design and climate adaptation strategies by identifying vulnerable households most affected by rising cooling demand.
+*“Building Energy Performance Standards: Impacts on Building Energy Efficiency and GHG Emissions in Washington, DC,”*  
+quantifies the ex post causal effects of Washington, DC’s Building Energy Performance Standards (BEPS) on building-level energy use intensity and greenhouse gas emissions using longitudinal administrative data and a continuous-treatment difference-in-differences framework. By exploiting variation in pre-policy compliance gaps, the study identifies how mandatory performance standards drive efficiency and emissions reductions, with effects intensifying once compliance becomes binding.  
+This research contributes to the energy economics and urban climate policy literature by providing rare causal evidence on performance-based building regulation, offering policy-relevant insights for cities seeking scalable pathways to decarbonize existing building stock.
 
 ---
 
