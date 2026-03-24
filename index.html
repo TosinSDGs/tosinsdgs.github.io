@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Tosin Kolajo Gbadegesin – Ph.D. Economist</title> <!-- **Updated title** -->
+  <title>Tosin Kolajo Gbadegesin – Economist (Consulting & Tech)</title>
 
   <!-- Mobile + SEO -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tosin Gbadegesin — Ph.D. Economist. Research: Energy, Urban, and Environmental Economics; secondary interests in Labor and Health Economics. Projects, publications, and CV." /> <!-- **Updated description** -->
+  <meta name="description" content="Tosin Gbadegesin — Economist specializing in causal inference, machine learning, and applied microeconomics. Focus on energy, climate, and urban systems. Experience at the World Bank Group." />
   <meta name="robots" content="index, follow" />
 
   <!-- Canonical + Sitemap -->
@@ -15,8 +15,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Tosin Gbadegesin – Ph.D. Economist" /> <!-- **Updated** -->
-  <meta property="og:description" content="Energy, Urban, and Environmental Economics — research and projects." /> <!-- **Updated** -->
+  <meta property="og:title" content="Tosin Gbadegesin – Economist (Consulting & Tech)" />
+  <meta property="og:description" content="Causal inference, machine learning, and policy-relevant analytics for energy, climate, and urban systems." />
   <meta property="og:url" content="https://tosinsdgs.github.io/" />
   <meta property="og:image" content="https://tosinsdgs.github.io/tosin.jpg" />
 
@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Navigation Bar */
     nav {
       display: flex;
       justify-content: center;
@@ -48,11 +47,10 @@
       border: none;
       cursor: pointer;
       padding: 6px 10px;
-      vertical-align: middle;
       font-family: inherit;
     }
 
-    nav a:hover, .dropdown:hover button, .dropdown button:focus {
+    nav a:hover, .dropdown:hover button {
       color: #0077cc;
     }
 
@@ -68,19 +66,16 @@
       min-width: 210px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 6px;
-      text-align: left;
       top: 100%;
       left: 0;
       z-index: 999;
     }
 
     .dropdown-content a {
-      color: #333;
       padding: 10px 15px;
       display: block;
+      color: #333;
       text-decoration: none;
-      font-weight: 500;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     .dropdown-content a:hover {
@@ -88,12 +83,10 @@
       color: #0077cc;
     }
 
-    .dropdown:hover .dropdown-content,
-    .dropdown-content:hover {
+    .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    /* Page Layout */
     .main-container {
       display: flex;
       justify-content: space-between;
@@ -113,105 +106,44 @@
     }
 
     .name-title {
-      font-size: 1.6em;
+      font-size: 1.7em;
       color: #003366;
-      text-align: center;
       margin-bottom: 5px;
     }
 
     .field-info {
       font-size: 1em;
-      color: #333;
       margin-bottom: 15px;
     }
 
     .photo-inline {
       width: 200px;
-      height: auto;
-      object-fit: contain;
       margin-bottom: 15px;
-      background-color: transparent;
-      border: none;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
 
     .email-line {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
       margin-top: 10px;
       font-size: 0.95em;
-      flex-wrap: wrap;
-    }
-
-    .email-line svg {
-      width: 18px;
-      height: 18px;
-      fill: #0077cc;
-    }
-
-    .email-line a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    .email-line a:hover {
-      color: #0077cc;
     }
 
     .intro-text p {
-      color: #333;
       line-height: 1.6;
       margin-bottom: 12px;
-    }
-
-    h2 {
-      color: #003366;
-      margin-bottom: 8px;
-    }
-
-    .jmp-section {
-      margin-top: 30px;
-    }
-
-    .scholar-link {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #0077cc;
-    }
-
-    .scholar-link img {
-      width: 18px;
-      height: 18px;
-      margin-right: 6px;
     }
 
     footer {
       text-align: center;
       margin-top: 40px;
-      padding: 10px 0;
+      padding: 10px;
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
-      font-size: 14px;
     }
 
     @media (max-width: 768px) {
       .main-container {
         flex-direction: column;
         align-items: center;
-      }
-      .right-column {
-        width: 100%;
-      }
-      .left-column {
-        margin-bottom: 25px;
-      }
-      .email-line {
-        flex-direction: column;
       }
     }
   </style>
@@ -222,17 +154,15 @@
   <nav>
     <a href="index.html">Home</a>
     <div class="dropdown">
-      <button onclick="toggleDropdown()">Research ▾</button>
-      <div class="dropdown-content" id="researchDropdown">
-        <a href="jobmarket.html">Job Market</a>
+      <button>Research ▾</button>
+      <div class="dropdown-content">
         <a href="ongoing.html">Ongoing Research</a>
         <a href="publications.html">Publications</a>
       </div>
     </div>
-    <a href="dissertation.html">Dissertation</a>
-    <a href="cv.html">Bio/CV</a>
-    <a href="work.html">Work Experience</a>
+    <a href="cv.html">CV</a>
     <a href="projects.html">Projects</a>
+    <a href="work.html">Experience</a>
     <a href="contact.html">Contact</a>
   </nav>
 
@@ -240,24 +170,17 @@
     <div class="left-column">
       <h1 class="name-title">
         Tosin Kolajo Gbadegesin<br>
-        <span class="title-regular">Ph.D. Economist</span> <!-- **Updated** -->
+        Economist
       </h1>
 
       <p class="field-info">
-        <strong>Field:</strong> Energy & Environmental Economics<br> <!-- **Updated wording** -->
-        <strong>Secondary Fields:</strong> Urban & Labor Economics <!-- **Updated wording** -->
+        Energy, Climate, and Urban Economics<br>
+        Causal Inference • Machine Learning • Applied Econometrics
       </p>
 
-      <img src="tosin.jpg" alt="Portrait of Tosin Gbadegesin" class="photo-inline">
+      <img src="tosin.jpg" alt="Portrait" class="photo-inline">
 
       <div class="email-line">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 
-                   2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm18 0H4v.01L12 
-                   11l8-6.99V4zm0 2.236l-7.555 6.604a1 1 0 0 
-                   1-1.29 0L4 6.236V20h16V6.236z"/>
-        </svg>
-        <a href="mailto:tosingbadegesin@bison.howard.edu">tosingbadegesin@bison.howard.edu</a> | 
         <a href="mailto:tosingbade05@gmail.com">tosingbade05@gmail.com</a>
       </div>
     </div>
@@ -265,37 +188,34 @@
     <div class="right-column">
       <div class="intro-text">
         <p>
-          I am a Ph.D. Economist specializing in applied microeconomics, causal machine learning, and econometrics, with a focus on energy, climate, and urban systems. <!-- **Updated** -->
+          I am an economist specializing in causal inference and machine learning, with a focus on how policy, markets, and technology shape energy use, urban systems, and economic outcomes.
         </p>
 
         <p>
-          With over eight years of experience in research and policy analysis, I have worked across the private sector and development organizations, including the World Bank Group.
-        </p>        
-           
-        <p>
-          My research examines how energy and climate policies influence urban resilience, energy efficiency, and equity outcomes.
+          My work sits at the intersection of economics, data science, and decision-making. I design empirical strategies and build data-driven models to evaluate policy impacts, estimate heterogeneous effects, and generate actionable insights for complex systems.
         </p>
 
         <p>
-          My dissertation, <em>"Climate Change, Energy Demand, and Policy Impacts: Analyzing Residential and Building Energy Dynamics in the U.S."</em>, investigates household and building energy responses to climate change and regulation.
+          I have experience applying these tools in both research and operational contexts, including at the World Bank Group, where I have worked on energy, climate, and development policy analytics.
         </p>
 
         <p>
-          I am available for research, policy, and consulting roles in academia, industry, and international organizations. <!-- **Replaces job market line** -->
+          My recent work uses causal machine learning and quasi-experimental methods to study how climate-driven energy demand affects household behavior, costs, and inequality across the distribution.
+        </p>
+
+        <p>
+          I am particularly interested in roles where economic modeling, data, and experimentation inform product, strategy, or policy decisions.
         </p>
       </div>
 
       <div class="jmp-section">
         <p>
-          You can download my 
-          <a href="Tosin%20GBADEGESIN_CV(f)_JM3a.pdf" target="_blank" rel="noopener">Academic CV</a> or 
-          <a href="Tosin%20GBADEGESIN_CV(f)_JM3b.pdf" target="_blank" rel="noopener">Resume</a>.
+          Download my <a href="Tosin%20GBADEGESIN_CV(f)_JM3a.pdf" target="_blank">CV</a> or 
+          <a href="Tosin%20GBADEGESIN_CV(f)_JM3b.pdf" target="_blank">Resume</a>.
         </p>
 
         <p>
-          You can also view my 
-          <a href="https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en" target="_blank" class="scholar-link">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar logo">
+          <a href="https://scholar.google.com/citations?user=GAGucXEAAAAJ&hl=en" target="_blank">
             Google Scholar Profile
           </a>
         </p>
@@ -304,32 +224,8 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Tosin Gbadegesin</p> <!-- **Updated year** -->
+    <p>&copy; 2026 Tosin Gbadegesin</p>
   </footer>
-
-  <script>
-    function toggleDropdown() {
-      document.getElementById("researchDropdown").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropdown button')) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    };
-  </script>
-
-  <style>
-    .show {
-      display: block !important;
-    }
-  </style>
 
 </body>
 </html>
