@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    /* Navigation Bar */
     nav {
       display: flex;
       justify-content: center;
@@ -18,8 +17,6 @@
       flex-wrap: wrap;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: bold;
-      position: relative;
-      z-index: 10;
     }
 
     nav a, .dropdown button {
@@ -31,11 +28,10 @@
       border: none;
       cursor: pointer;
       padding: 6px 10px;
-      vertical-align: middle;
       font-family: inherit;
     }
 
-    nav a:hover, .dropdown:hover button, .dropdown button:focus {
+    nav a:hover, .dropdown:hover button {
       color: #0077cc;
     }
 
@@ -51,19 +47,16 @@
       min-width: 210px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 6px;
-      text-align: left;
       top: 100%;
       left: 0;
       z-index: 999;
     }
 
     .dropdown-content a {
-      color: #333;
       padding: 10px 15px;
       display: block;
+      color: #333;
       text-decoration: none;
-      font-weight: 500;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     .dropdown-content a:hover {
@@ -71,13 +64,10 @@
       color: #0077cc;
     }
 
-    /* Keep dropdown open on hover */
-    .dropdown:hover .dropdown-content,
-    .dropdown-content:hover {
+    .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    /* Page Layout */
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
@@ -121,7 +111,6 @@
       text-decoration: underline;
     }
 
-    /* Footer */
     footer {
       display: flex;
       justify-content: center;
@@ -130,9 +119,7 @@
       padding: 20px 0;
       background-color: #f9f9f9;
       border-top: 1px solid #ccc;
-      text-align: center;
       font-size: 14px;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #333;
     }
 
@@ -140,11 +127,6 @@
       .jmp-section {
         padding: 0 15px;
       }
-    }
-
-    /* Dropdown toggle helper for mobile */
-    .show {
-      display: block !important;
     }
   </style>
 </head>
@@ -156,9 +138,8 @@
     <a href="index.html">Home</a>
 
     <div class="dropdown">
-      <button onclick="toggleDropdown()">Research ▾</button>
-      <div class="dropdown-content" id="researchDropdown">
-        <a href="jobmarket.html">Job Market</a>
+      <button>Research ▾</button>
+      <div class="dropdown-content">
         <a href="ongoing.html">Ongoing Research</a>
         <a href="publications.html">Publications</a>
       </div>
@@ -166,7 +147,7 @@
 
     <a href="dissertation.html">Dissertation</a>
     <a href="cv.html">Bio/CV</a>
-    <a href="work.html">Work Experience</a>
+    <a href="work.html">Experience</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -174,22 +155,25 @@
   <!-- Main Content -->
   <div class="jmp-section">
     <h1>Bio</h1>
+
     <p>
-      Tosin Gbadegesin is a Ph.D. candidate in Economics at Howard University with almost a decade of experience applying
-      data-driven solutions to complex policy and business problems. At the World Bank Group, he leads the design,
-      strategy, and implementation of the IFC’s <em>Private Sector Gender and Economic Inclusion Data Hub</em>—overseeing
-      technical development, integrating diverse data sources, and managing cross-functional teams to deliver high-impact analytics.
+      Tosin Gbadegesin is an Economist (Ph.D., Howard University) with nearly a decade of experience applying data-driven methods to policy, business, and development challenges. His work combines causal inference, machine learning, and applied econometrics to generate actionable insights for decision-making in energy, climate, and urban systems.
     </p>
 
     <p>
-      Tosin has contributed to projects across multiple World Bank Group departments, applying econometric modeling,
-      machine learning, and causal inference to inform strategic decision-making and investment evaluation. His work bridges the
-      intersection of applied microeconomics, causal ML, energy, environmental, and urban economics, producing
-      actionable insights for policy and private sector development.
+      At the World Bank Group, he leads the design, strategy, and implementation of the IFC’s <em>Private Sector Gender and Economic Inclusion Data Hub</em>. In this role, he oversees technical architecture, data integration across multiple global sources, and cross-functional collaboration to deliver scalable analytics platforms that inform investment and policy decisions.
     </p>
 
     <p>
-      He holds an M.A. in Economics from Howard University and an M.Sc. in Economic Development from the University of Ibadan, Nigeria. His academic and professional works are grounded in causal inference, empirical policy evaluation, and microeconomic theory.
+      Tosin has contributed to projects across multiple World Bank Group units, applying quasi-experimental methods and predictive analytics to evaluate policy impacts, assess investment effectiveness, and support evidence-based strategy. His work bridges research and implementation, translating complex empirical analysis into insights for operational and strategic use.
+    </p>
+
+    <p>
+      His research focuses on how climate change and energy demand shape household behavior, costs, and inequality, with an emphasis on heterogeneous and distributional effects. He has published in peer-reviewed journals and contributed to flagship policy reports.
+    </p>
+
+    <p>
+      He holds a Ph.D. and M.A. in Economics from Howard University and an M.Sc. in Economic Development from the University of Ibadan, Nigeria. His training is grounded in microeconomic theory, causal inference, and empirical policy evaluation.
     </p>
 
     <h2>Download CV / Resume</h2>
@@ -202,27 +186,8 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tosin Gbadegesin</p>
+    <p>&copy; 2026 Tosin Gbadegesin</p>
   </footer>
-
-  <!-- JS dropdown toggle for click devices -->
-  <script>
-    function toggleDropdown() {
-      document.getElementById("researchDropdown").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropdown button')) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    };
-  </script>
 
 </body>
 </html>
